@@ -1,6 +1,4 @@
-# Official Web
-
-Official 서비스
+# deathnote-wevb
 
 ## Installation
 
