@@ -28,6 +28,18 @@ const baseAPI = axios.create({
 
 // user 정보를 불러온다.
 export const officialService = {
+    getOfficialByUid: async (uid, token) => {
+        try {
+            const res = await baseAPI.get(`/v1/official?uid=${uid}`, {
+                headers: { 'X-AUTH-TOKEN': token },
+            });
+            console.log(res);
+            return res.data || [];
+        } catch (err) {
+            console.log('공지사항 불러오기 실패');
+            return [];
+        }
+    },
     postOfficial: async (title, description, uid) => {
         const formData = new FormData();
         formData.append('title', title.toString());

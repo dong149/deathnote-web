@@ -1,38 +1,69 @@
 import { Empty } from 'antd';
 import React, { useEffect, useState } from 'react';
+import { OfficialList } from '../../Components/OfficialList';
 import { isEmpty } from '../../Functions';
 import { officialService } from '../../Services/officialService';
 import { userService } from '../../Services/userService';
-
-const MyPage = () => {
+const Official = () => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [official, setOfficial] = useState();
+    const [officialList, setOfficialList] = useState([]);
+    const [isOfficialListCompleted, setIsOffiialListCompleted] = useState(
+        false
+    );
     const [token, setToken] = useState('');
     const [uid, setUid] = useState('');
     useEffect(() => {
-        // token 이 없을경우
-        if (!localStorage.getItem('token')) {
-            console.log(window.history);
-            window.history.pushState('', '', '/');
-            window.location.reload();
-        } else {
-            console.log(JSON.parse(localStorage.getItem('token')));
-            setToken(JSON.parse(localStorage.getItem('token')));
-            const getToken = async (token) => {
-                try {
-                    await userService.getUserInfo(token).then((res) => {
-                        if (!isEmpty(res)) {
-                            setUid(res.data.uid);
-                            console.log(res);
+        const getOfficial = async () => {
+            console.log(uid, token);
+            try {
+                await officialService
+                    .getOfficialByUid(uid, token)
+                    .then((res) => {
+                        if (!isEmpty(res.list)) {
+                            console.log(res.list);
+                            setOfficialList(res.list);
+                            setIsOffiialListCompleted(true);
                             return;
                         }
                     });
-                } catch (err) {
-                    console.log(err);
-                    return;
-                }
-            };
+            } catch (err) {
+                console.log(err);
+                return;
+            }
+        };
+        // token 이 없을경우
+        if (!localStorage.getItem('token')) {
+            window.history.pushState('', '', '/');
+            window.location.reload();
+        } else {
+            if (!isEmpty(uid)) {
+                getOfficial();
+            }
+        }
+    }, [uid]);
+    useEffect(() => {
+        const getToken = async (token) => {
+            try {
+                await userService.getUserInfo(token).then((res) => {
+                    if (!isEmpty(res)) {
+                        setUid(res.data.uid);
+                        console.log(res);
+                        return;
+                    }
+                });
+            } catch (err) {
+                console.log(err);
+                return;
+            }
+        };
+        // token 이 없을경우
+        if (!localStorage.getItem('token')) {
+            window.history.pushState('', '', '/');
+            window.location.reload();
+        } else {
+            setToken(JSON.parse(localStorage.getItem('token')));
             if (!isEmpty(token)) {
                 getToken(token);
                 console.log(token);
@@ -81,8 +112,14 @@ const MyPage = () => {
                     value={official}
                 />
             )}
+            {!isEmpty(officialList) && isOfficialListCompleted ? (
+                <OfficialList data={officialList} />
+            ) : (
+                // <OfficialList officialList={officialList} />
+                <div>empty</div>
+            )}
         </div>
     );
 };
 
-export default MyPage;
+export default Official;

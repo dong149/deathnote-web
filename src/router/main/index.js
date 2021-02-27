@@ -1,68 +1,60 @@
 import React, { useEffect, useState } from 'react';
-import { loginService } from '../../Services/loginService';
-// import KakaoLogin from 'react-kakao-login';
-
-// 회원가입이 되어있는지 확인하기 위해 /v1/signin/{provider} 로 요청한 이후에
-//
+import '../../Styles/router/main.scss';
 
 const Main = () => {
-    const [isLogin, setIsLogin] = useState(false);
-    const [token, setToken] = useState('');
+    const [name, setName] = useState('');
 
-    useEffect(() => {
-        window.Kakao.init('7c8e56dd4982c3c61e61359952462cfa');
-        console.log(window.Kakao);
-    }, []);
-    useEffect(() => {
-        if (localStorage.getItem('token')) {
-            console.log(window.history);
-            window.history.pushState('', '', '/mypage');
-            window.location.reload();
-        }
-    }, [isLogin]);
-    const loginWithKakao = () => {
-        try {
-            return new Promise((resolve, reject) => {
-                if (!window.Kakao) {
-                    reject('Kakao 인스턴스가 존재하지 않습니다.');
-                }
-                window.Kakao.Auth.login({
-                    success: (auth) => {
-                        console.log('정상적으로 로그인 되었습니다.', auth);
-                        loginService.postKakaoLogin(auth.access_token, 'ryoo');
-                        setIsLogin(true);
-                    },
-                    fail: (err) => {
-                        console.log(err);
-                    },
-                });
-            });
-        } catch (err) {
-            console.log(err);
+    const enterEvent = async () => {
+        // try {
+        //   const temp = await getSummonerByName(summoners);
+        //   getLeagueByEncryptedId(temp);
+        // }
+        // catch (err) {
+        //   console.error(err);
+        // }
+    };
+    const handleKeyPress = (e) => {
+        if (e.keyCode === 13) {
+            enterEvent();
         }
     };
+
     return (
-        <div>
-            <h1>Random Campus</h1>
-            <p>
-                <div>
-                    <img
-                        src="/kakao/kakao_login_medium_wide.png"
-                        alt="kakao login btn"
-                        onClick={() => loginWithKakao()}
-                        style={{ cursor: 'pointer' }}
+        <>
+            <div className="mainBox">
+                <img
+                    className="mainLogo"
+                    src="/deathnote.png"
+                    alt="deathnote_logo"
+                />
+                <div className="mainSearch">
+                    <input
+                        className="mainSearchForm"
+                        placeholder="소환사명, 소환사명, ..."
+                        onChange={(e) => setName(e.target.value)}
+                        onKeyDown={(e) => {
+                            handleKeyPress(e);
+                        }}
+                    />
+                    <button
+                        className="mainSearchFormButton"
+                        onClick={() => {
+                            enterEvent();
+                        }}
+                    >
+                        검색
+                    </button>
+                </div>
+            </div>
+            {/* {summonersLeague ? (
+                <div className="summoner-info-box">
+                    <Logo
+                        src={require(`../public/ranked-emblems/Emblem_${summonersLeague[0].tier}.png`)}
+                        alt="summonersTierImg"
                     />
                 </div>
-                {/* <KakaoLogin
-                    jsKey="c8e56dd4982c3c61e61359952462cfa"
-                    onSuccess={handleKakaoSuccess}
-                    onFailure={handleKakaoFail}
-                    className="KakaoLogin"
-                /> */}
-                {/* </KakaoLogin> */}
-                {/* <button>카카오톡 로그인</button> */}
-            </p>
-        </div>
+            ) : null} */}
+        </>
     );
 };
 
