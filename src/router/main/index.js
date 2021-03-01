@@ -51,16 +51,19 @@ const Main = () => {
             </div>
             {!isEmpty(summonerInfo) && (
                 <div className="summonerInfo">
-                    <img
-                        src={`https://ddragon.leagueoflegends.com/cdn/10.8.1/img/profileicon/${summonerInfo.summonerIcon}.png`}
-                        alt="소환사 프로필 이미지"
-                    />
+                    <div>
+                        <h1>김명현입니다. 나이는 24살이구요!</h1>
+                        <img
+                            src={`https://ddragon.leagueoflegends.com/cdn/10.8.1/img/profileicon/${summonerInfo.summonerIcon}.png`}
+                            alt="소환사 프로필 이미지"
+                        />
+                        <span>{summonerInfo.summonerName}</span>
+                    </div>
                     {!isEmpty(summonerInfo.summonerMatch) &&
                         summonerInfo.summonerMatch.map((data, key) => {
                             const championName = getChampionNamebyId(
                                 String(data.matchChampion)
                             );
-                            console.log(championName);
                             return (
                                 <div>
                                     {data.matchRank}
@@ -89,14 +92,55 @@ const Main = () => {
 export default Main;
 
 const test = {
+    summonerName: 'Hide on bush',
     trollerScore: 70,
     matchCount: 21,
-    matchWin: 8,
-    matchLose: 13,
+    matchWin: 9,
+    matchLose: 12,
     summonerIcon: 6,
     summonerTier: 'GRANDMASTER',
     summonerRank: 'I',
     summonerMatch: [
+        {
+            matchRank: 7,
+            matchWin: true,
+            matchChampion: 777,
+            matchKills: 4,
+            matchDeaths: 2,
+            matchAssists: 5,
+        },
+        {
+            matchRank: 1,
+            matchWin: true,
+            matchChampion: 236,
+            matchKills: 13,
+            matchDeaths: 5,
+            matchAssists: 8,
+        },
+        {
+            matchRank: 9,
+            matchWin: false,
+            matchChampion: 236,
+            matchKills: 5,
+            matchDeaths: 8,
+            matchAssists: 5,
+        },
+        {
+            matchRank: 7,
+            matchWin: false,
+            matchChampion: 13,
+            matchKills: 1,
+            matchDeaths: 5,
+            matchAssists: 6,
+        },
+        {
+            matchRank: 3,
+            matchWin: true,
+            matchChampion: 498,
+            matchKills: 4,
+            matchDeaths: 5,
+            matchAssists: 9,
+        },
         {
             matchRank: 1,
             matchWin: true,
@@ -224,46 +268,6 @@ const test = {
             matchKills: 3,
             matchDeaths: 0,
             matchAssists: 9,
-        },
-        {
-            matchRank: 1,
-            matchWin: true,
-            matchChampion: 61,
-            matchKills: 4,
-            matchDeaths: 5,
-            matchAssists: 5,
-        },
-        {
-            matchRank: 6,
-            matchWin: false,
-            matchChampion: 235,
-            matchKills: 0,
-            matchDeaths: 3,
-            matchAssists: 4,
-        },
-        {
-            matchRank: 4,
-            matchWin: true,
-            matchChampion: 134,
-            matchKills: 4,
-            matchDeaths: 4,
-            matchAssists: 4,
-        },
-        {
-            matchRank: 4,
-            matchWin: false,
-            matchChampion: 236,
-            matchKills: 7,
-            matchDeaths: 7,
-            matchAssists: 2,
-        },
-        {
-            matchRank: 9,
-            matchWin: false,
-            matchChampion: 236,
-            matchKills: 1,
-            matchDeaths: 2,
-            matchAssists: 2,
         },
     ],
 };
