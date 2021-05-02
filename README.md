@@ -1,4 +1,4 @@
-# deathnote-wevb
+# deathnote-web
 
 ## Installation
 
