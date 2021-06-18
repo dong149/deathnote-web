@@ -8,12 +8,13 @@ import {
 } from 'react-router-dom';
 import Main from './main';
 import '../Styles/styles.scss';
+import Summoner from './summoner';
+
 export const EntryRoute = () => (
     <BrowserRouter>
         <Switch>
-            <Route path="/" component={Main} />
-            {/* <Route path="/introduce" component={Introduce} />
-            <Route path="/school" component={People} /> */}
+            <Route exact path="/" component={Main} />
+            <Route path="/summoner/:name" component={Summoner} />
         </Switch>
     </BrowserRouter>
 );
