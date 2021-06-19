@@ -3,22 +3,20 @@ import { getChampionNamebyId } from '../../champion';
 import { isEmpty } from '../../Functions';
 import { deathnoteService } from '../../Services/deathnoteService';
 import { Doughnut } from 'react-chartjs-2';
+import { useHistory } from 'react-router';
 import '../../Styles/router/main.scss';
 
 const Main = () => {
+    const history = useHistory();
     const [name, setName] = useState('');
-    const [summonerInfo, setSummonerInfo] = useState(test);
-    const [reportGood, setReportGood] = useState(1);
-    const [reportBad, setReportBad] = useState(1);
-    const [reportType, setReportType] = useState(false);
-    const [reportDescription, setReportDescription] = useState('');
-    const [reportViewOpen, setReportViewOpen] = useState(false);
-    const [reports, setReports] = useState(reportTest);
     const enterEvent = async () => {
         try {
-            const res = await deathnoteService.getDeathnoteByName(name);
-            console.log(res);
-            setSummonerInfo(res);
+            history.push({
+                pathname: `/summoner/name=${name}`,
+            });
+            // const res = await deathnoteService.getDeathnoteByName(name);
+            // console.log(res);
+            // setSummonerInfo(res);
         } catch (err) {
             console.error(err);
         }
@@ -27,25 +25,6 @@ const Main = () => {
         if (e.keyCode === 13) {
             enterEvent();
         }
-    };
-
-    let ReportChart = () => {
-        let data = {
-            datasets: [
-                {
-                    data: [reportBad, reportGood],
-
-                    backgroundColor: ['rgba(0,0,0, 1)', 'rgba(0,0,0,0.1)'],
-                    borderColor: ['#ffffff', '#ffffff'],
-                    hoverBackgroundColor: ['#FF0100', '#56C1FF'],
-                },
-            ],
-            labels: ['리폿', '칭찬'],
-        };
-        let options = {
-            animation: false,
-        };
-        return <Doughnut data={data} options={options} className="mainChart" />;
     };
 
     return (
@@ -80,291 +59,6 @@ const Main = () => {
 };
 
 export default Main;
-
-const reportTest = [
-    {
-        id: 2,
-        summonerName: 'hideonbush',
-        description: '너무 반갑구~~',
-        createdDate: '2021-03-05T20:45:03.405415',
-        report: true,
-    },
-    {
-        id: 5,
-        summonerName: 'hideonbush',
-        description: '너무 반가엉ㅎㅎ',
-        createdDate: '2021-03-07T20:44:00.26224',
-        report: false,
-    },
-];
-
-const test = {
-    summonerName: 'Hide on bush',
-    trollerScore: 60,
-    matchCount: 21,
-    matchWinningRate: 52,
-    matchWin: 238,
-    matchLose: 217,
-    summonerLevel: 425,
-    summonerIcon: 6,
-    summonerTier: 'GRANDMASTER',
-    summonerRank: 'I',
-    summonerMatch: [
-        {
-            matchRank: 3,
-            matchWin: false,
-            matchChampion: 236,
-            matchKills: 8,
-            matchDeaths: 6,
-            matchAssists: 10,
-            matchDealRank: 1,
-            matchTankRank: 9,
-            matchKdaScoreRank: 5,
-            matchTowerDealRank: 1,
-        },
-        {
-            matchRank: 3,
-            matchWin: true,
-            matchChampion: 236,
-            matchKills: 9,
-            matchDeaths: 3,
-            matchAssists: 5,
-            matchDealRank: 2,
-            matchTankRank: 10,
-            matchKdaScoreRank: 4,
-            matchTowerDealRank: 2,
-        },
-        {
-            matchRank: 9,
-            matchWin: false,
-            matchChampion: 235,
-            matchKills: 3,
-            matchDeaths: 7,
-            matchAssists: 8,
-            matchDealRank: 8,
-            matchTankRank: 7,
-            matchKdaScoreRank: 9,
-            matchTowerDealRank: 5,
-        },
-        {
-            matchRank: 2,
-            matchWin: false,
-            matchChampion: 134,
-            matchKills: 6,
-            matchDeaths: 3,
-            matchAssists: 8,
-            matchDealRank: 2,
-            matchTankRank: 10,
-            matchKdaScoreRank: 3,
-            matchTowerDealRank: 3,
-        },
-        {
-            matchRank: 2,
-            matchWin: true,
-            matchChampion: 112,
-            matchKills: 3,
-            matchDeaths: 0,
-            matchAssists: 6,
-            matchDealRank: 2,
-            matchTankRank: 10,
-            matchKdaScoreRank: 2,
-            matchTowerDealRank: 1,
-        },
-        {
-            matchRank: 9,
-            matchWin: false,
-            matchChampion: 104,
-            matchKills: 1,
-            matchDeaths: 5,
-            matchAssists: 5,
-            matchDealRank: 7,
-            matchTankRank: 5,
-            matchKdaScoreRank: 9,
-            matchTowerDealRank: 6,
-        },
-        {
-            matchRank: 7,
-            matchWin: false,
-            matchChampion: 517,
-            matchKills: 2,
-            matchDeaths: 5,
-            matchAssists: 3,
-            matchDealRank: 8,
-            matchTankRank: 2,
-            matchKdaScoreRank: 8,
-            matchTowerDealRank: 6,
-        },
-        {
-            matchRank: 4,
-            matchWin: true,
-            matchChampion: 134,
-            matchKills: 3,
-            matchDeaths: 2,
-            matchAssists: 5,
-            matchDealRank: 1,
-            matchTankRank: 9,
-            matchKdaScoreRank: 5,
-            matchTowerDealRank: 4,
-        },
-        {
-            matchRank: 9,
-            matchWin: true,
-            matchChampion: 134,
-            matchKills: 2,
-            matchDeaths: 5,
-            matchAssists: 7,
-            matchDealRank: 7,
-            matchTankRank: 10,
-            matchKdaScoreRank: 9,
-            matchTowerDealRank: 7,
-        },
-        {
-            matchRank: 3,
-            matchWin: true,
-            matchChampion: 39,
-            matchKills: 10,
-            matchDeaths: 4,
-            matchAssists: 9,
-            matchDealRank: 5,
-            matchTankRank: 5,
-            matchKdaScoreRank: 2,
-            matchTowerDealRank: 3,
-        },
-        {
-            matchRank: 9,
-            matchWin: true,
-            matchChampion: 77,
-            matchKills: 4,
-            matchDeaths: 5,
-            matchAssists: 13,
-            matchDealRank: 9,
-            matchTankRank: 1,
-            matchKdaScoreRank: 7,
-            matchTowerDealRank: 7,
-        },
-        {
-            matchRank: 10,
-            matchWin: false,
-            matchChampion: 134,
-            matchKills: 3,
-            matchDeaths: 5,
-            matchAssists: 6,
-            matchDealRank: 5,
-            matchTankRank: 10,
-            matchKdaScoreRank: 9,
-            matchTowerDealRank: 7,
-        },
-        {
-            matchRank: 2,
-            matchWin: true,
-            matchChampion: 134,
-            matchKills: 7,
-            matchDeaths: 3,
-            matchAssists: 12,
-            matchDealRank: 1,
-            matchTankRank: 10,
-            matchKdaScoreRank: 2,
-            matchTowerDealRank: 3,
-        },
-        {
-            matchRank: 8,
-            matchWin: false,
-            matchChampion: 134,
-            matchKills: 1,
-            matchDeaths: 5,
-            matchAssists: 5,
-            matchDealRank: 6,
-            matchTankRank: 10,
-            matchKdaScoreRank: 9,
-            matchTowerDealRank: 3,
-        },
-        {
-            matchRank: 3,
-            matchWin: true,
-            matchChampion: 235,
-            matchKills: 8,
-            matchDeaths: 5,
-            matchAssists: 25,
-            matchDealRank: 6,
-            matchTankRank: 10,
-            matchKdaScoreRank: 2,
-            matchTowerDealRank: 2,
-        },
-        {
-            matchRank: 9,
-            matchWin: false,
-            matchChampion: 203,
-            matchKills: 7,
-            matchDeaths: 6,
-            matchAssists: 3,
-            matchDealRank: 7,
-            matchTankRank: 1,
-            matchKdaScoreRank: 6,
-            matchTowerDealRank: 10,
-        },
-        {
-            matchRank: 2,
-            matchWin: true,
-            matchChampion: 61,
-            matchKills: 8,
-            matchDeaths: 2,
-            matchAssists: 12,
-            matchDealRank: 3,
-            matchTankRank: 10,
-            matchKdaScoreRank: 2,
-            matchTowerDealRank: 3,
-        },
-        {
-            matchRank: 8,
-            matchWin: false,
-            matchChampion: 134,
-            matchKills: 4,
-            matchDeaths: 6,
-            matchAssists: 7,
-            matchDealRank: 5,
-            matchTankRank: 10,
-            matchKdaScoreRank: 8,
-            matchTowerDealRank: 7,
-        },
-        {
-            matchRank: 9,
-            matchWin: false,
-            matchChampion: 235,
-            matchKills: 4,
-            matchDeaths: 9,
-            matchAssists: 12,
-            matchDealRank: 8,
-            matchTankRank: 8,
-            matchKdaScoreRank: 10,
-            matchTowerDealRank: 6,
-        },
-        {
-            matchRank: 4,
-            matchWin: false,
-            matchChampion: 777,
-            matchKills: 1,
-            matchDeaths: 2,
-            matchAssists: 1,
-            matchDealRank: 5,
-            matchTankRank: 4,
-            matchKdaScoreRank: 6,
-            matchTowerDealRank: 5,
-        },
-        {
-            matchRank: 4,
-            matchWin: true,
-            matchChampion: 142,
-            matchKills: 1,
-            matchDeaths: 1,
-            matchAssists: 6,
-            matchDealRank: 4,
-            matchTankRank: 8,
-            matchKdaScoreRank: 5,
-            matchTowerDealRank: 4,
-        },
-    ],
-};
-
 // {!isEmpty(summonerInfo) && (
 //     <div className="summonerInfo">
 //         <div className="summonerInfoHeader">
