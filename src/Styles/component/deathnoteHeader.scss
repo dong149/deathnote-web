@@ -1,4 +1,69 @@
-.test{
-    font-size: 50px;
-    color: white;
+.HeaderBox {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px;
+    background-color: white;
+    // height: 200px;
+
+    .ProfileLeft {
+        display: flex;
+        align-items: center;
+        // width:50%;
+        .ProfileImg{
+            width:200px;
+        }
+
+        .ProfileBlock {
+            width: 300px;
+            text-align: left;
+            padding-left: 15px;
+            // height: 80px;
+            .SummonerName {
+                font-size: 30px;
+                color: black;
+                margin: auto;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+            .SummonerLevel {
+                margin: auto;
+                font-weight: bold;
+                color: gray;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            .UpdateButton {
+                margin: auto;
+                margin-top: 10px;
+                padding: 7px;
+                // width: 80px;
+                // height: 35px;
+                align-items: center;
+                border: none;
+                background-color: black;
+                font-size: 16px;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .CommentBox {
+        display: flex;
+        background-color: black;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        width: 450px;
+        height: 100px;
+        color: white;
+        font-size: 20px;
+    }
 }

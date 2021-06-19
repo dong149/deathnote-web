@@ -1,10 +1,20 @@
 import React from 'react';
 import '../Styles/component/deathnoteSearch.scss';
-const DeathnoteSearch = () => {
-    /*
-비즈니스 로직
-*/
-    return <div className="test">DeathnoteHeader</div>;
+const DeathnoteSearchBox = (props) => {
+    const { data } = props;
+    return (
+        <div className="DeathnoteSearchWrap">
+            <div className="DeathnoteSearch">
+                <input
+                    className="SearchBox"
+                    placeholder="소환사명, 소환사명, ..."
+                />
+                <button className="SearchButton" onClick={() => {}}>
+                    검색
+                </button>
+            </div>
+        </div>
+    );
 };
 
-export default DeathnoteSearch;
+export default DeathnoteSearchBox;

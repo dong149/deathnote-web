@@ -1,0 +1,47 @@
+
+
+.DeathnoteSearchWrap{
+
+}
+.DeathnoteSearch{
+    // float:right;
+    // display:flex;
+    width:400px;
+    height:50px;
+    display:flex;
+    // margin: auto;
+    // margin-right: 50px;
+    align-items: center;
+    // position: relative;
+    background-color: white;
+}
+.SearchBox{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    padding-left: 18px;
+    background: white;
+    border: none;
+    line-height: 17px;
+    font-size: 18px;
+    color: #222222;
+    box-sizing: border-box;
+    outline: none;
+}
+.SearchButton{
+    margin-left:auto;
+    width: 40px;
+    align-items: center;
+    border: none;
+    background-color: black;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    outline: none;
+    margin-right: 10px;
+    height: 40px;
+    width: 60px;
+    cursor: pointer;
+    
+}
