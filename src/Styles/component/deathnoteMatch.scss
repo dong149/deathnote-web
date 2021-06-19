@@ -1,0 +1,56 @@
+.DeathnoteMatch{
+    top: 40px;
+    margin: auto;
+    padding-top: 10px;
+    position: relative;
+    width: 850px;
+    height:490px;
+    background-color: white;
+}
+
+.summonerMatchWin{
+    display: flex;
+    width: 150px;
+    height: 220px;
+    background-image:linear-gradient(rgba(0,136,204, 0.9), rgba(0,136,204, 0.6));
+    margin: auto;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 10px;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.summonerMatchLose{
+    display: flex;
+    width: 150px;
+    height: 220px;
+    background-image: linear-gradient(rgba(220,1,30, 0.9), rgba(220,1,30, 0.6));
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 10px;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.summonerMatchRank{
+    font-size:30px;
+    text-align: center;
+    padding-right:0px;
+    display: inline-block;
+}
+.summonerMatchKDA{
+    font-size:30px;
+    text-align: center;
+    padding-right: 20px;
+    display: inline-block;
+}
