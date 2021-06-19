@@ -1,0 +1,58 @@
+.ReportMainBox{
+    display: flex;
+    margin-left: 200px;
+    background-color: white;
+    height: 500px;
+    width: 1000px;
+    margin-bottom: 200px;
+    padding: 10px;
+    
+}
+
+.ReportChart{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 50px;
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    border-style:unset;
+}
+
+.DoughnutChart{
+    margin: auto;
+}
+
+.ReportBox{
+    background-color: white;
+    float: right;
+    width: 600px;
+    height: 500px;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    border-style:solid;
+    align-items: center;
+    //border-color: black;
+}
+
+.ReportWindow{
+    margin-top: 10px;
+    background-color: black;
+    float: right;
+    width: 405px;
+    height: 300px;
+    color: white;
+    font-size: 20px;
+}
+.ReportInput{
+    
+    margin-top: 10px;
+    background-color: black;
+    float: right;
+    width: 400px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+}

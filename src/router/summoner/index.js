@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import DeathnoteHeader from '../../Components/DeathnoteHeader';
+import DeathnoteReport from '../../Components/DeathnoteReport';
 import DeathnoteSearch from '../../Components/DeathnoteSearchBox';
 import { isEmpty } from '../../Functions';
 import { deathnoteService } from '../../Services/deathnoteService';
@@ -25,6 +26,8 @@ const Summoner = ({ match }) => {
                     </h2>
                 </div>
             )}
+            <DeathnoteHeader />
+            <DeathnoteReport />
         </div>
     );
 };
