@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import DeathnoteHeader from '../../Components/DeathnoteHeader';
+import DeathnoteSearch from '../../Components/DeathnoteSearchBox';
 import { deathnoteService } from '../../Services/deathnoteService';
 
 const Summoner = ({ match }) => {
@@ -19,9 +20,7 @@ const Summoner = ({ match }) => {
 
     return (
         <div>
-            <h1 style={{ color: 'white' }}>이게 바로 데스노트 Summoner 다!!</h1>
-            <h2 style={{ color: 'white' }}>{match.params.name}</h2>
-            <DeathnoteHeader />
+            <DeathnoteSearch/>
         </div>
     );
 };
