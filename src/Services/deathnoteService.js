@@ -2,20 +2,13 @@ import axios from 'axios';
 
 let BASE_URL;
 
-if (process.env.NODE_ENV === 'production') {
-    BASE_URL = process.env.REACT_APP_BASE_URL;
-} else {
-    BASE_URL = 'http://localhost:3000';
-}
-
-const config = {
-    crossdomain: true,
-    headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-    },
-};
+// if (process.env.NODE_ENV === 'production') {
+//     BASE_URL = process.env.REACT_APP_BASE_URL;
+//     console.log('production');
+// } else {
+//     BASE_URL = 'http://localhost:3000';
+// }
+BASE_URL = process.env.REACT_APP_BASE_URL;
 const baseAPI = axios.create({
     baseURL: BASE_URL,
     headers: {
@@ -28,9 +21,11 @@ const baseAPI = axios.create({
 
 // user 정보를 불러온다.
 export const deathnoteService = {
-    getDeathnoteByName: async (name) => {
+    getDeathnoteByName: async (summonerName) => {
         try {
-            const res = await baseAPI.get(`/v1/summoner/info?name=${name}`);
+            const res = await baseAPI.get(
+                `api/v1/deathnote/summoner?${summonerName}`
+            );
             console.log(res);
             return res.data || [];
         } catch (err) {
