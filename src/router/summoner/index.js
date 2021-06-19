@@ -25,7 +25,7 @@ const Summoner = ({ match }) => {
     return (
         <>
             {isEmpty(deathtnoteData) ? (
-                <h1 style={{ color: 'white' }}>로딩중입니다.</h1>
+                <h1 style={{ color: 'white' }}>로딩중입니다..</h1>
             ) : (
                 <div style={{ margin: '0 auto', width: '80%' }}>
                     <DeathnoteMainHeader data={deathtnoteData} />
