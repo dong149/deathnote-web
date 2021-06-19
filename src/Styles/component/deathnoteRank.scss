@@ -1,131 +1,67 @@
-.Rank_side_content{
-    display: inline-block;
-    width: 300px;
-    font-size: 12px;
-    vertical-align: top;
-}
-
-.Rank_banner{
-    margin-top: 10px;
-}
-.Rank_Summoner_Medium{
-    display: table;
+.Rank_Wrap {
     width: 100%;
-    color: #879292;
-    position: relative;
-    background-color: #f2f2f2;
-    padding: 8px 0;
-}
-.Rank_image_wrap{
-    display: table-cell;
-    vertical-align: middle;
-    width: 120px;
-    height: 124px;
+    height: 200px;
+    display: flex;
     text-align: center;
-}
-.Rank_image{
-    width: 104px;
-    height: 104px;
-    margin: -5px 0 -10px 0;
-}
-.Rank_text{
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
-.Rank_type{
-    font-size: 11px;
-    color: #879292;
-}
-.Rank_tier{
-    font-size: 15px;
-    font-weight: bold;
-    color: red;
-}
-.Rank_info{
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: left;
-}
-.Rank_points{
-    color: #555e5e;
-    font-weight: bold;
-}
-.Rank_WinLose{
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: left;
-}
-.Rank_wins{
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: left;
-}
-.Rank_losses{
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: left;
-}
-.Rank_winratio{
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: left;
-}
-
-/*
-.ranking_banner{
-    top: 25px;
-    left: 100px; 
-    padding: 20px;
-    position: relative;
-    width:400px;
-    height:200px;
-    background: white;
-    //text-align: center;
-    color: rgb(143, 138, 138);
-    font-size: 12px;
-}
-
-.ranking_text{
-    position: relative;
-    //top: px;
-    left: 200px;
-    color: rgb(143, 138, 138);
-    font-size: 12px;
-}
-
-.ranking_name{
-    color:red;
-    font-size: 30px;
-
-}
-
-.ranking_image_wrap{
-    position: absolute;
-    top: 50px;
-    left: 50px;
-
-}
-
-.ranking_image{
-    top: 50px;
-    left: 50px;
-    max-width: 100px;
-    max-height: 100px;
-}
-
-.ranking_LP{
-    color: black;
-}
-.ranking_info{
+.Rank_side_content {
+    width: 400px;
+    height: 100%;
+    display: flex;
     text-align: center;
-    color: gray;
-    font-size: 30px;
+    align-items: center;
+    background-color: white;
+    .Rank_banner {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .Rank_image_wrap {
+            width: 150px;
+            text-align: center;
+        }
+        .Rank_image {
+            width: 100%;
+        }
+        .Rank_text {
+            font-size: 18px;
+            text-align: left;
+            padding-left: 10px;
+            .Rank_type {
+                font-size: 18px;
+                color: #879292;
+            }
+            .Rank_tier {
+                font-size: 25px;
+                font-weight: bold;
+                color: red;
+            }
+            .Rank_info {
+                font-size: 20px;
+                text-align: left;
+            }
+            .Rank_points {
+                display: block;
+                color: #555e5e;
+                font-weight: bold;
+            }
+            .Rank_WinLose {
+                display: block;
+                padding-top: 10px;
+                font-size: 18px;
+                text-align: left;
+            }
+            .Rank_winratio {
+                display: block;
+                padding-top: 2px;
+                font-size: 18px;
+                text-align: left;
+            }
+        }
+    }
 }
-
-*/

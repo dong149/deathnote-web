@@ -9,6 +9,7 @@ import '../Styles/router/main.scss';
 
 
 const DeathnoteReport = () => {
+<<<<<<< HEAD
     /*
 비즈니스 로직
 */
@@ -52,6 +53,9 @@ const DeathnoteReport = () => {
 
 
     );
+=======
+    return <div className="test">DeathnoteHeader</div>;
+>>>>>>> 261d218041abf20dad3b80bb3ed466308cea88e5
 };
 
 
