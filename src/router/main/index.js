@@ -3,12 +3,17 @@ import { getChampionNamebyId } from '../../champion';
 import { isEmpty } from '../../Functions';
 import { deathnoteService } from '../../Services/deathnoteService';
 import { Doughnut } from 'react-chartjs-2';
+import { useHistory } from 'react-router';
 import '../../Styles/router/main.scss';
 
 const Main = () => {
+    const history = useHistory();
     const [name, setName] = useState('');
     const enterEvent = async () => {
         try {
+            history.push({
+                pathname: `/summoner/name=${name}`,
+            });
             // const res = await deathnoteService.getDeathnoteByName(name);
             // console.log(res);
             // setSummonerInfo(res);

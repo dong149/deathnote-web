@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import DeathnoteMainHeader from '../../Components/DeathnoteMainHeader';
+import DeathnoteHeader from '../../Components/DeathnoteHeader';
+import DeathnoteSearch from '../../Components/DeathnoteSearchBox';
+import { isEmpty } from '../../Functions';
 import { deathnoteService } from '../../Services/deathnoteService';
 
 const Summoner = ({ match }) => {
     // 소환사 이름
     const summonerName = match.params.name;
-    const [deathtnoteData, setDeathnoteData] = useState([]);
+    const [deathtnoteData, setDeathnoteData] = useState({});
 
     useEffect(() => {
         deathnoteService.getDeathnoteByName(summonerName).then((data) => {
@@ -16,7 +18,13 @@ const Summoner = ({ match }) => {
 
     return (
         <div>
-            <DeathnoteMainHeader/>
+            {!isEmpty(deathtnoteData) && (
+                <div>
+                    <h2 style={{ color: 'white' }}>
+                        {deathtnoteData.data.summonerTier}
+                    </h2>
+                </div>
+            )}
         </div>
     );
 };
