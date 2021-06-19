@@ -1,10 +1,10 @@
 import React from 'react';
 import '../Styles/component/deathnoteSearch.scss';
-const DeathnoteSearch = () => {
-    /*
-비즈니스 로직
-*/
+const DeathnoteSearchBox = () => {
+
+
     return <div className="DeathnoteSearch">
+        
         <input
             className="SearchBox"
             placeholder="소환사명, 소환사명, ..."
@@ -20,4 +20,4 @@ const DeathnoteSearch = () => {
     </div>;
 };
 
-export default DeathnoteSearch;
+export default DeathnoteSearchBox;
