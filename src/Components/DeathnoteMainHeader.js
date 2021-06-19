@@ -1,16 +1,16 @@
 import React from 'react';
 import '../Styles/component/deathnoteMainHeader.scss';
 import DeathnoteSearchBox from './DeathnoteSearchBox';
-const DeathnoteMainHeader = () => {
-
-
-    return <div className="DeathnoteMainHeader">
-        <img 
-            src="/deathnote-title.png"
-            width="300"
-        />
-        <DeathnoteSearchBox/>
-    </div>;
+const DeathnoteMainHeader = (props) => {
+    const { data } = props;
+    return (
+        <div className="mainHeader">
+            <div className="mainLogoWrap">
+                <img className="mainLogo" src="/deathnote-title.png" />
+            </div>
+            <DeathnoteSearchBox data={data} />
+        </div>
+    );
 };
 
 export default DeathnoteMainHeader;
