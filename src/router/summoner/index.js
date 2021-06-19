@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import DeathnoteHeader from '../../Components/DeathnoteHeader';
-import DeathnoteSearch from '../../Components/DeathnoteSearchBox';
+import DeathnoteMainHeader from '../../Components/DeathnoteMainHeader';
+import { deathnoteService } from '../../Services/deathnoteService';
 
 const Summoner = ({ match }) => {
     return (
         <div>
-            <DeathnoteSearch/>
+            <DeathnoteMainHeader/>
         </div>
     );
 };
