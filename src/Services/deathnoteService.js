@@ -26,4 +26,40 @@ export const deathnoteService = {
             return [];
         }
     },
+    getReportByName: async (summonerName) => {
+        try {
+            const res = await baseAPI.get(`api/v1/report?${summonerName}`);
+            console.log(res);
+            return res.data || reportDefaultData;
+        } catch (err) {
+            console.log('Report 데이터 받기 실패');
+            return [];
+        }
+    },
+    postReportByName: async (content, accountId, report, summonerName) => {
+        try {
+            const res = await baseAPI.post(`api/v1/report`, {
+                content: content,
+                accountId: accountId,
+                report: report,
+                summonerName: summonerName,
+            });
+            console.log(res);
+            return res.data || [];
+        } catch (err) {
+            console.log(err);
+        }
+    },
+};
+
+const reportDefaultData = {
+    reportCount: 1,
+    noReportCount: 0,
+    data: [
+        {
+            reportId: 0,
+            content: '소환사에 대해 리뷰를 남겨주세요.',
+            report: true,
+        },
+    ],
 };

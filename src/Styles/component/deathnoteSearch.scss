@@ -1,47 +1,47 @@
-
-
-.DeathnoteSearchWrap{
-
+.DeathnoteSearchWrap {
 }
-.DeathnoteSearch{
+.DeathnoteSearch {
     // float:right;
     // display:flex;
-    width:400px;
-    height:50px;
-    display:flex;
+    width: 400px;
+    height: 40px;
+    display: flex;
     // margin: auto;
     // margin-right: 50px;
     align-items: center;
     // position: relative;
     background-color: white;
 }
-.SearchBox{
+.SearchBox {
     display: flex;
     align-items: center;
     width: 80%;
-    height: 50px;
+    height: 35px;
     padding-left: 18px;
     background: white;
     border: none;
     line-height: 17px;
-    font-size: 18px;
+    font-size: 16px;
     color: #222222;
     box-sizing: border-box;
     outline: none;
 }
-.SearchButton{
-    margin-left:auto;
+.SearchButton {
+    margin-left: auto;
     width: 40px;
     align-items: center;
     border: none;
     background-color: black;
-    font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     outline: none;
     margin-right: 10px;
-    height: 40px;
+    height: 30px;
     width: 60px;
     cursor: pointer;
-    
+    &:hover {
+        box-shadow: 0 30px 60px 12px rgba(0, 0, 33, 0.05),
+            0 4px 24px 0 rgba(0, 0, 33, 0.05), 0 0 1px 0 rgba(0, 0, 33, 0.09);
+        font-weight: bold;
+    }
 }
