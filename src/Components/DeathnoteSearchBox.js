@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import '../Styles/component/deathnoteSearch.scss';
-const DeathnoteSearchBox = (props) => {
+const DeathnoteSearchBox = () => {
     const history = useHistory();
-    const { data } = props;
     const [name, setName] = useState('');
     const enterEvent = async () => {
         try {
