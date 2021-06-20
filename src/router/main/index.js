@@ -5,7 +5,6 @@ import { deathnoteService } from '../../Services/deathnoteService';
 import { Doughnut } from 'react-chartjs-2';
 import { useHistory } from 'react-router';
 import '../../Styles/router/main.scss';
-
 const Main = () => {
     const history = useHistory();
     const [name, setName] = useState('');
@@ -14,9 +13,6 @@ const Main = () => {
             history.push({
                 pathname: `/summoner/name=${name}`,
             });
-            // const res = await deathnoteService.getDeathnoteByName(name);
-            // console.log(res);
-            // setSummonerInfo(res);
         } catch (err) {
             console.error(err);
         }

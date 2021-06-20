@@ -6,7 +6,9 @@ const DeathnoteMainHeader = (props) => {
     return (
         <div className="mainHeader">
             <div className="mainLogoWrap">
-                <img className="mainLogo" src="/deathnote-title.png" />
+                <a href="/">
+                    <img className="mainLogo" src="/deathnote-title.png" />
+                </a>
             </div>
             <DeathnoteSearchBox data={data} />
         </div>

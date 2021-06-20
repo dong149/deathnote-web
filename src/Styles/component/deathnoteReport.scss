@@ -1,0 +1,309 @@
+.Report {
+    width: 100%;
+    margin-top: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .ReportChart {
+    }
+
+    .ReportContents {
+    }
+
+    .ReportInputForm {
+    }
+}
+
+.report-chart-wrap {
+    width: 500px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    min-width: 350px;
+
+    height: 500px;
+    text-align: center;
+    // align-items: center;
+    // display: flex;
+    // text-align: center;
+    // justify-content: center;
+    // align-items: center;
+
+    .report-chart-text {
+        width: 100%;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+}
+
+// 소환사 리뷰
+
+.summoner-review-wrap {
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 500px;
+    padding-top: 50px;
+    min-width: 350px;
+    padding-left: 30px;
+    padding-bottom: 80px;
+    align-items: center;
+}
+.summoner-review {
+    // width: 50%;
+    text-align: left;
+    // padding-left: 30px;
+    // padding-bottom: 80px;
+    .summoner-review-text-wrap {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        .summoner-review-text {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        // 리뷰 타입 버튼
+        .summoner-review-type {
+            float: right;
+            // margin-right: 100px;
+            // padding-top: 30px;
+            .summoner-review-type-text {
+                display: inline-block;
+                font-size: 17px;
+                padding-right: 15px;
+            }
+            .summoner-review-type-bad-wrap {
+                display: inline-block;
+                background-color: #1a1d20;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: white;
+                cursor: pointer;
+                &:hover {
+                    box-shadow: 0 30px 60px 12px rgba(0, 0, 33, 0.05),
+                        0 4px 24px 0 rgba(0, 0, 33, 0.05),
+                        0 0 1px 0 rgba(0, 0, 33, 0.09);
+                    font-weight: bold;
+                }
+                .summoner-review-type-bad {
+                }
+            }
+            .summoner-review-type-good-wrap {
+                display: inline-block;
+                box-shadow: 0 30px 60px 12px rgba(0, 0, 33, 0.05),
+                    0 4px 24px 0 rgba(0, 0, 33, 0.05),
+                    0 0 1px 0 rgba(0, 0, 33, 0.09);
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                    box-shadow: 0 30px 60px 12px rgba(0, 0, 33, 0.15),
+                        0 4px 24px 0 rgba(0, 0, 33, 0.15),
+                        0 0 1px 0 rgba(0, 0, 33, 0.15);
+                    font-weight: bold;
+                }
+                .summoner-review-type-good {
+                }
+            }
+        }
+    }
+    .summoner-review-good-input-wrap {
+        padding-top: 30px;
+        width: 100%;
+
+        .summoner-review-good-input {
+            box-sizing: border-box;
+            width: 100%;
+            resize: none;
+            box-shadow: 0 30px 60px 12px rgba(0, 0, 33, 0.05),
+                0 4px 24px 0 rgba(0, 0, 33, 0.05),
+                0 0 1px 0 rgba(0, 0, 33, 0.09);
+            border: 0;
+            padding: 15px;
+            font-size: 20px;
+        }
+    }
+    .summoner-review-bad-input-wrap {
+        padding-top: 30px;
+        width: 100%;
+
+        .summoner-review-bad-input {
+            box-sizing: border-box;
+            width: 100%;
+            resize: none;
+            background-color: #1a1d20;
+            color: white;
+            border: 0;
+            padding: 15px;
+            // padding-left: 15px;
+            // padding-top: 15px;
+            font-size: 20px;
+        }
+    }
+    .summoner-review-btn-wrap {
+        width: 100%;
+        text-align: right;
+        padding-top: 10px;
+        .summoner-review-submit-btn {
+            font-size: 20px;
+            // font-weight: lighter;
+            color: crimson;
+            cursor: pointer;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+        .summoner-review-close-btn {
+            font-size: 20px;
+            color: red;
+            // font-weight: lighter;
+            cursor: pointer;
+            &:hover {
+                // font-weight: normal;
+            }
+        }
+    }
+    .review-view-text {
+        margin-top: 40px;
+        width: 100%;
+        text-align: left;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .review-view {
+        width: 100%;
+        .review-view-bad {
+            display: block;
+            width: 100%;
+            text-align: left;
+            .review-view-date-bad-wrap {
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 20px;
+                .review-view-date-bad {
+                    color: grey;
+                    // font-weight: lighter;
+                    font-size: 15px;
+                }
+            }
+            .review-view-content-bad-wrap {
+                display: block;
+                width: max-content;
+                max-width: 100%;
+                background-color: #1a1d20;
+                box-shadow: 0 30px 60px 12px rgba(0, 0, 33, 0.05),
+                    0 4px 24px 0 rgba(0, 0, 33, 0.05),
+                    0 0 1px 0 rgba(0, 0, 33, 0.09);
+                border-radius: 20px;
+                padding: 20px 20px;
+                margin-left: 20px;
+                .review-view-content-bad {
+                    white-space: pre-line;
+                    font-size: 15px;
+                    color: white;
+                    // font-weight: lighter;
+                }
+            }
+        }
+        .review-view-good {
+            display: block;
+            width: 100%;
+            height: auto;
+            text-align: right;
+
+            &:after {
+                content: '';
+                clear: both;
+                display: block;
+            }
+            .review-view-date-good-wrap {
+                display: block;
+
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-right: 20px;
+
+                .review-view-date-good {
+                    color: grey;
+                    // font-weight: lighter;
+                    font-size: 15px;
+                }
+            }
+            .review-view-content-good-wrap {
+                display: block;
+                float: right;
+                max-width: 100%;
+                width: max-content;
+                box-shadow: 0 30px 60px 12px rgba(0, 0, 33, 0.05),
+                    0 4px 24px 0 rgba(0, 0, 33, 0.05),
+                    0 0 1px 0 rgba(0, 0, 33, 0.09);
+                border-radius: 20px;
+                padding: 20px 20px;
+                margin-right: 20px;
+
+                .review-view-content-good {
+                    white-space: pre-line;
+                    font-size: 15px;
+                    // font-weight: lighter;
+                }
+            }
+        }
+    }
+    .review-view-close-btn-wrap {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 20px;
+
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 -5px 300px -5px rgba(0, 0, 0, 0.8);
+        font-size: 20px;
+        font-weight: lighter;
+        color: white;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            font-weight: normal;
+            color: white;
+        }
+        .review-view-close-btn {
+        }
+    }
+    .review-view-open-btn-wrap {
+        height: 50px;
+        line-height: 50px;
+        margin-top: -90px;
+
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 -5px 300px -5px rgba(0, 0, 0, 0.8);
+        font-size: 20px;
+        font-weight: lighter;
+        color: white;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            font-weight: normal;
+            color: white;
+        }
+        .review-view-open-btn {
+        }
+    }
+    .review-none-wrap {
+        width: 100%;
+        margin-top: -250px;
+        text-align: center;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+}

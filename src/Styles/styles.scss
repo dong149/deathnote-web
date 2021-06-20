@@ -1,20 +1,15 @@
-@import "./mixin.scss";
-
-
-body{
-    background-color:#000000;
+@import './mixin.scss';
+$open-sans: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+body {
+    background-color: #000000;
+    font-family: $open-sans;
 }
-
-
-
 
 @include mobile {
-
 }
 @include tablet {
-
 }
-  
-@include desktop {
 
+@include desktop {
 }
