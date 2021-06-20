@@ -5,6 +5,7 @@ import { deathnoteService } from '../../Services/deathnoteService';
 import { Doughnut } from 'react-chartjs-2';
 import { useHistory } from 'react-router';
 import '../../Styles/router/main.scss';
+import DeathnoteFooter from '../../Components/DeathnoteFooter';
 const Main = () => {
     const history = useHistory();
     const [name, setName] = useState('');
@@ -26,11 +27,13 @@ const Main = () => {
     return (
         <>
             <div className="mainBox">
-                <img
-                    className="mainLogo"
-                    src="/deathnote.png"
-                    alt="deathnote_logo"
-                />
+                <a href="https://deathtnote.gg">
+                    <img
+                        className="mainLogo"
+                        src="/deathnote.png"
+                        alt="deathnote_logo"
+                    />
+                </a>
                 <div className="mainSearch">
                     <input
                         className="mainSearchForm"
@@ -49,6 +52,18 @@ const Main = () => {
                         검색
                     </button>
                 </div>
+                <a
+                    href="/deathnote/function"
+                    style={{ textDecoration: 'none' }}
+                >
+                    <div className="mainDeathnoteDescription">
+                        Powered By{' '}
+                        <span style={{ color: '#FF0061', fontWeight: 'bold' }}>
+                            Deathnote(x)
+                        </span>
+                    </div>
+                </a>
+                {/* <DeathnoteFooter /> */}
             </div>
         </>
     );

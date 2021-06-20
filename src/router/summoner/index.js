@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import DeathnoteBanner from '../../Components/DeathnoteBanner';
 import DeathnoteHeader from '../../Components/DeathnoteHeader';
+import DeathnoteLoading from '../../Components/DeathnoteLoading';
 import DeathnoteMainHeader from '../../Components/DeathnoteMainHeader';
 import DeathnoteMatch from '../../Components/DeathnoteMatch';
 import DeathnoteRank from '../../Components/DeathnoteRank';
@@ -8,7 +9,7 @@ import DeathnoteReport from '../../Components/DeathnoteReport';
 import DeathnoteSearch from '../../Components/DeathnoteSearchBox';
 import { isEmpty } from '../../Functions';
 import { deathnoteService } from '../../Services/deathnoteService';
-
+import '../../Styles/router/summoner.scss';
 const Summoner = ({ match }) => {
     // 소환사 이름
     const summonerName = match.params.name;
@@ -33,7 +34,23 @@ const Summoner = ({ match }) => {
     return (
         <>
             {isEmpty(deathtnoteData) || isEmpty(reportData) ? (
-                <h1 style={{ color: 'white' }}>로딩중입니다..</h1>
+                <div className="SummonerLoadingWrap">
+                    <DeathnoteLoading />
+                    <div
+                        className="mainDeathnoteDescription"
+                        style={{ marginTop: '50px' }}
+                    >
+                        Powered By{' '}
+                        <span style={{ color: '#FF0061', fontWeight: 'bold' }}>
+                            Deathnote(x)
+                        </span>
+                    </div>
+                    <div className="SummonerLoading">
+                        최대 1분 정도 소요될 수 있습니다.
+                        <br />
+                        조금만 기다려주세요!
+                    </div>
+                </div>
             ) : (
                 <div
                     style={{
@@ -45,7 +62,7 @@ const Summoner = ({ match }) => {
                         flexWrap: 'wrap',
                     }}
                 >
-                    <DeathnoteMainHeader data={deathtnoteData} />
+                    <DeathnoteMainHeader />
                     <DeathnoteHeader data={deathtnoteData} />
                     <DeathnoteRank data={deathtnoteData} />
                     <DeathnoteReport

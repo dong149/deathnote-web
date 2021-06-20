@@ -40,12 +40,11 @@ const DeathnoteRank = (props) => {
                             style={{ color: `${tierColor}` }}
                             className="Rank_tier"
                         >
-                            {' '}
-                            {data.summonerTier}{' '}
+                            {data.summonerTier} {data.summonerRank}
                         </div>
                         <div className="Rank_info">
                             <div className="Rank_WinLose">
-                                {data.matchWin}승 {data.matchLose}패
+                                최근 전적 {data.matchWin}승 {data.matchLose}패
                             </div>
                             <div className="Rank_winratio">
                                 승률 {data.matchWinningRate}%

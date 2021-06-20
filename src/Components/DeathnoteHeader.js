@@ -93,9 +93,22 @@ const DeathnoteHeader = (props) => {
                             </span>
                             입니다. {'"'}
                         </div>
-                        <div className="DeathnotePower">
-                            Powered by DEATHNOTE(x)
-                        </div>
+                        <a
+                            href="/deathnote/function"
+                            style={{ color: 'white', textDecoration: 'none' }}
+                        >
+                            <div className="DeathnotePower">
+                                Powered by{' '}
+                                <span
+                                    style={{
+                                        color: `${tierColor}`,
+                                        fontWeight: 'bold',
+                                    }}
+                                >
+                                    DEATHNOTE(x)
+                                </span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

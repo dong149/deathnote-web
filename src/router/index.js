@@ -9,12 +9,14 @@ import {
 import Main from './main';
 import '../Styles/styles.scss';
 import Summoner from './summoner';
+import DeathnoteFunction from './deathnoteFunction';
 
 export const EntryRoute = () => (
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={Main} />
             <Route path="/summoner/:name" component={Summoner} />
+            <Route path="/deathnote/function" component={DeathnoteFunction} />
         </Switch>
     </BrowserRouter>
 );
