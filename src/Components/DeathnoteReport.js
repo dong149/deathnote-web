@@ -19,8 +19,9 @@ const DeathnoteReport = (props) => {
                 summonerName
             )
             .then((data) => {
-                if (data.status == 201) alert('성공');
-                else alert('실패');
+                window.location.reload();
+                // if (data.status == 201) alert('성공');
+                // else alert('실패');
             });
     };
 

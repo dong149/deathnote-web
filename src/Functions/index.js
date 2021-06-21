@@ -20,7 +20,7 @@ export const handleDate = (date) => {
     let dyear = parseInt(date.substring(0, 4));
     let dmonth = parseInt(date.substring(5, 7)) - 1;
     let dday = parseInt(date.substring(8, 10));
-    let dhour = parseInt(date.substring(11, 13)) - 4;
+    let dhour = parseInt(date.substring(11, 13)) + 9;
     let dmin = parseInt(date.substring(14, 16));
     let dsec = parseInt(date.substring(17, 19));
 

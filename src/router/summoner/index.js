@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import DeathnoteBanner from '../../Components/DeathnoteBanner';
+import DeathnoteFooter from '../../Components/DeathnoteFooter';
 import DeathnoteHeader from '../../Components/DeathnoteHeader';
 import DeathnoteLoading from '../../Components/DeathnoteLoading';
 import DeathnoteMainHeader from '../../Components/DeathnoteMainHeader';
@@ -72,6 +73,7 @@ const Summoner = ({ match }) => {
                     />
                 </div>
             )}
+            <DeathnoteFooter />
         </>
     );
 };
