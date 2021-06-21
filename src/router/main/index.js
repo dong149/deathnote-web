@@ -27,7 +27,7 @@ const Main = () => {
     return (
         <>
             <div className="mainBox">
-                <a href="https://deathtnote.gg">
+                <a href="https://deathnote.gg">
                     <img
                         className="mainLogo"
                         src="/deathnote.png"
