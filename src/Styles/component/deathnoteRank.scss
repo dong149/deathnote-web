@@ -1,13 +1,14 @@
 .Rank_Wrap {
-    width: 100%;
+    // width: 100%;
     // min-height: 150px;
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 0;
+    flex-grow: 1;
     flex-direction: row;
     text-align: center;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
     margin-top: 30px;
 }
 
@@ -18,6 +19,7 @@
     text-align: center;
     align-items: center;
     background-color: white;
+    box-sizing: border-box;
     .Rank_banner {
         display: flex;
         align-items: center;

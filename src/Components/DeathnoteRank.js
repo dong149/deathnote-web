@@ -28,33 +28,37 @@ const DeathnoteRank = (props) => {
     getTier(data.summonerTier);
 
     return (
-        <div className="Rank_Wrap">
-            <div className="Rank_side_content">
-                <div className="Rank_banner">
-                    <div className="Rank_image_wrap">
-                        <img src={rankImgSrc} className="Rank_image" />
-                    </div>
-                    <div className="Rank_text">
-                        <div className="Rank_type">솔로랭크</div>
-                        <div
-                            style={{ color: `${tierColor}` }}
-                            className="Rank_tier"
-                        >
-                            {data.summonerTier} {data.summonerRank}
+        <div style={{ display: 'flex', width: '100%', flexWrap: 'wrap' }}>
+            <div className="Rank_Wrap">
+                <div className="Rank_side_content">
+                    <div className="Rank_banner">
+                        <div className="Rank_image_wrap">
+                            <img src={rankImgSrc} className="Rank_image" />
                         </div>
-                        <div className="Rank_info">
-                            <div className="Rank_WinLose">
-                                최근 전적 {data.matchWin}승 {data.matchLose}패
+                        <div className="Rank_text">
+                            <div className="Rank_type">솔로랭크</div>
+                            <div
+                                style={{ color: `${tierColor}` }}
+                                className="Rank_tier"
+                            >
+                                {data.summonerTier} {data.summonerRank}
                             </div>
-                            <div className="Rank_winratio">
-                                승률 {data.matchWinningRate}%
+                            <div className="Rank_info">
+                                <div className="Rank_WinLose">
+                                    최근 전적 {data.matchWin}승 {data.matchLose}
+                                    패
+                                </div>
+                                <div className="Rank_winratio">
+                                    승률 {data.matchWinningRate}%
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                {/* <DeathnoteBanner /> */}
             </div>
             <DeathnoteMatch data={data} />
-            {/* <DeathnoteBanner /> */}
         </div>
     );
 };
