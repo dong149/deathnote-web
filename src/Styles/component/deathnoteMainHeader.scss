@@ -1,16 +1,41 @@
-.mainHeader {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 30px;
+@import '../mixin.scss';
+@include mobile {
+    .mainHeader {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .mainLogoWrap {
+        width: 200px;
+        cursor: pointer;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        .mainLogo {
+            width: 100%;
+        }
+    }
 }
 
-.mainLogoWrap {
-    width: 250px;
-    cursor: pointer;
-    .mainLogo {
+@include tabletAndDesktop {
+    .mainHeader {
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .mainLogoWrap {
+        width: 250px;
+        cursor: pointer;
+        .mainLogo {
+            width: 100%;
+        }
     }
 }

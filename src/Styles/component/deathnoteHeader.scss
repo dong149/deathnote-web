@@ -2,9 +2,13 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
     text-align: center;
     align-items: center;
+    overflow: auto;
+    white-space: nowrap;
     width: 100%;
+    min-width: 340px;
     margin-top: 30px;
     background-color: white;
     // height: 200px;
