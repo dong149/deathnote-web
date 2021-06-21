@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../Styles/component/deathnoteReport.scss';
 import { Doughnut } from 'react-chartjs-2';
-import { isEmpty } from '../Functions';
+import { handleDate, isEmpty } from '../Functions';
 import { deathnoteService } from '../Services/deathnoteService';
 const DeathnoteReport = (props) => {
     const { reportData, accountId, summonerName } = props;
@@ -142,51 +142,58 @@ const DeathnoteReport = (props) => {
                         }}
                     >
                         {!isEmpty(reports) &&
-                            reports.map((data, key) => {
-                                if (data.report) {
-                                    return (
-                                        <div
-                                            key={key}
-                                            className="review-view-bad"
-                                        >
-                                            <div className="review-view-date-bad-wrap">
-                                                <span className="review-view-date-bad">
-                                                    {/* {handleDate(
+                            reports
+                                .slice(0)
+                                .reverse()
+                                .map((data, key) => {
+                                    if (data.report) {
+                                        return (
+                                            <div
+                                                key={key}
+                                                className="review-view-bad"
+                                            >
+                                                <div className="review-view-date-bad-wrap">
+                                                    <span className="review-view-date-bad">
+                                                        {/* {handleDate(
                                             data.date
                                         )} */}
-                                                    10개월 전
-                                                </span>
+                                                        {handleDate(
+                                                            data.createdAt
+                                                        )}
+                                                    </span>
+                                                </div>
+                                                <div className="review-view-content-bad-wrap">
+                                                    <span className="review-view-content-bad">
+                                                        {data.content}
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <div className="review-view-content-bad-wrap">
-                                                <span className="review-view-content-bad">
-                                                    {data.content}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    );
-                                } else {
-                                    return (
-                                        <div
-                                            key={key}
-                                            className="review-view-good"
-                                        >
-                                            <div className="review-view-date-good-wrap">
-                                                <span className="review-view-date-good">
-                                                    10개월 전
-                                                    {/* {handleDate(
+                                        );
+                                    } else {
+                                        return (
+                                            <div
+                                                key={key}
+                                                className="review-view-good"
+                                            >
+                                                <div className="review-view-date-good-wrap">
+                                                    <span className="review-view-date-good">
+                                                        {handleDate(
+                                                            data.createdAt
+                                                        )}
+                                                        {/* {handleDate(
                                             data.date
                                         )} */}
-                                                </span>
+                                                    </span>
+                                                </div>
+                                                <div className="review-view-content-good-wrap">
+                                                    <span className="review-view-content-good">
+                                                        {data.content}
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <div className="review-view-content-good-wrap">
-                                                <span className="review-view-content-good">
-                                                    {data.content}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    );
-                                }
-                            })}
+                                        );
+                                    }
+                                })}
                     </div>
 
                     {!isEmpty(reports) ? (
