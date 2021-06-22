@@ -10,7 +10,7 @@ import { createBrowserHistory } from 'history';
 const Main = () => {
     const history = useHistory();
     const [name, setName] = useState('');
-
+    const [keywordData, setKeywordData] = useState([]);
     const enterEvent = async () => {
         try {
             history.push({
@@ -25,6 +25,12 @@ const Main = () => {
             enterEvent();
         }
     };
+
+    useEffect(() => {
+        deathnoteService.getDeathnoteByKeyword(name).then((data) => {
+            setKeywordData(data.summonerKeywordDtoList);
+        });
+    }, [name]);
 
     return (
         <>
@@ -53,6 +59,46 @@ const Main = () => {
                     >
                         검색
                     </button>
+                </div>
+                <div className="mainSearchKeywordWrap">
+                    {!isEmpty(keywordData) &&
+                        keywordData.map((data, key) => {
+                            let profileSrc = `https://ddragon.leagueoflegends.com/cdn/11.12.1/img/profileicon/${data.summonerIcon}.png`;
+                            return (
+                                <div
+                                    className="mainSearchKeyword"
+                                    key={key}
+                                    onClick={() => {
+                                        history.push({
+                                            pathname: `/summoner/name=${data.summonerName}`,
+                                        });
+                                    }}
+                                >
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img
+                                                        className="mainSearchKeywordImg"
+                                                        src={profileSrc}
+                                                        alt={data.summonerIcon}
+                                                    />
+                                                </td>
+                                                <td className="mainSearchKeywordContent">
+                                                    <div className="mainSearchKeywordSummonerName">
+                                                        {data.summonerName}
+                                                    </div>
+                                                    <div className="mainSearchKeywordSummonerInfo">
+                                                        {data.summonerTier}{' '}
+                                                        {data.summonerRank}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            );
+                        })}
                 </div>
                 <a
                     href="/deathnote/function"
