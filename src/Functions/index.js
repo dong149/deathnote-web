@@ -20,7 +20,7 @@ export const handleDate = (date) => {
     let dyear = parseInt(date.substring(0, 4));
     let dmonth = parseInt(date.substring(5, 7)) - 1;
     let dday = parseInt(date.substring(8, 10));
-    let dhour = parseInt(date.substring(11, 13)) + 9;
+    let dhour = parseInt(date.substring(11, 13));
     let dmin = parseInt(date.substring(14, 16));
     let dsec = parseInt(date.substring(17, 19));
 
@@ -39,4 +39,22 @@ export const handleDate = (date) => {
     }
     let result = res + ' 전';
     return result;
+};
+
+export const getTierColor = (tier) => {
+    let temp;
+    if (tier === 'CHALLENGER') {
+        temp = '#FF0061';
+    } else if (tier === 'DIAMOND') {
+        temp = '#00B3FC';
+    } else if (tier === 'PLATINUM') {
+        temp = '#28E3A3';
+    } else if (tier === 'GOLD') {
+        temp = '#EC9A01';
+    } else if (tier === 'SILVER') {
+        temp = '#435F7A';
+    } else {
+        temp = '#AE5701';
+    }
+    return temp;
 };

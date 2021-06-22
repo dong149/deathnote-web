@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getChampionNamebyId } from '../../champion';
-import { isEmpty } from '../../Functions';
+import { getTierColor, isEmpty } from '../../Functions';
 import { deathnoteService } from '../../Services/deathnoteService';
 import { Doughnut } from 'react-chartjs-2';
 import { useHistory } from 'react-router';
@@ -64,6 +64,7 @@ const Main = () => {
                     {!isEmpty(keywordData) &&
                         keywordData.map((data, key) => {
                             let profileSrc = `https://ddragon.leagueoflegends.com/cdn/11.12.1/img/profileicon/${data.summonerIcon}.png`;
+                            let tierColor = getTierColor(data.summonerTier);
                             return (
                                 <div
                                     className="mainSearchKeyword"
@@ -88,7 +89,12 @@ const Main = () => {
                                                     <div className="mainSearchKeywordSummonerName">
                                                         {data.summonerName}
                                                     </div>
-                                                    <div className="mainSearchKeywordSummonerInfo">
+                                                    <div
+                                                        className="mainSearchKeywordSummonerInfo"
+                                                        style={{
+                                                            color: tierColor,
+                                                        }}
+                                                    >
                                                         {data.summonerTier}{' '}
                                                         {data.summonerRank}
                                                     </div>
