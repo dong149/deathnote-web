@@ -6,9 +6,11 @@ import { Doughnut } from 'react-chartjs-2';
 import { useHistory } from 'react-router';
 import '../../Styles/router/main.scss';
 import DeathnoteFooter from '../../Components/DeathnoteFooter';
+import { createBrowserHistory } from 'history';
 const Main = () => {
     const history = useHistory();
     const [name, setName] = useState('');
+
     const enterEvent = async () => {
         try {
             history.push({

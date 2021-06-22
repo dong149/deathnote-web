@@ -21,14 +21,12 @@ const Summoner = ({ match }) => {
             .getDeathnoteByName(summonerName, false)
             .then((data) => {
                 setDeathnoteData(data);
-                console.log(data);
             });
     }, []);
 
     useEffect(() => {
         deathnoteService.getReportByName(summonerName).then((data) => {
             setReportData(data);
-            console.log(data);
         });
     }, []);
 

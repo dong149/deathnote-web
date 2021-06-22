@@ -19,7 +19,7 @@ export const deathnoteService = {
             const res = await baseAPI.get(
                 `api/v1/deathnote/summoner?${summonerName}&?${reload}`
             );
-            console.log(res);
+            // console.log(res);
             return res.data.data || [];
         } catch (err) {
             console.log('데스노트 데이터 받기 실패');
@@ -29,7 +29,7 @@ export const deathnoteService = {
     getReportByName: async (summonerName) => {
         try {
             const res = await baseAPI.get(`api/v1/report?${summonerName}`);
-            console.log(res);
+            // console.log(res);
             return res.data || reportDefaultData;
         } catch (err) {
             console.log('Report 데이터 받기 실패');
@@ -44,7 +44,7 @@ export const deathnoteService = {
                 report: report,
                 summonerName: summonerName,
             });
-            console.log(res);
+            // console.log(res);
             return res.data || [];
         } catch (err) {
             console.log(err);

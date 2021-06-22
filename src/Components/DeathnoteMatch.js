@@ -14,10 +14,9 @@ const DeathnoteMatch = (props) => {
                         const championName = getChampionNamebyId(
                             String(data.matchChampion)
                         );
-                        console.log(championName);
                         if (data.matchWin) {
                             return (
-                                <div className="summonerMatchWin">
+                                <div className="summonerMatchWin" key={key}>
                                     <div className="summonerMatchImgWrap">
                                         <img
                                             className="summonerMatchImg"
@@ -35,7 +34,7 @@ const DeathnoteMatch = (props) => {
                             );
                         } else {
                             return (
-                                <div className="summonerMatchLose">
+                                <div className="summonerMatchLose" key={key}>
                                     <div className="summonerMatchImgWrap">
                                         <img
                                             className="summonerMatchImg"
