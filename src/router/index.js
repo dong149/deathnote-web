@@ -4,9 +4,8 @@ import Main from './main';
 import '../Styles/styles.scss';
 import Summoner from './summoner';
 import DeathnoteFunction from './deathnoteFunction';
-import { createBrowserHistory } from 'history';
-import ReactGA from 'react-ga';
 import withTracker from './withTracker';
+import DeathnoteRanker from './deathnoteRanker';
 export const EntryRoute = () => {
     return (
         <BrowserRouter>
@@ -19,6 +18,10 @@ export const EntryRoute = () => {
                 <Route
                     path="/deathnote/function"
                     component={withTracker(DeathnoteFunction, {})}
+                />
+                <Route
+                    path="/deathnote/ranker"
+                    component={withTracker(DeathnoteRanker, {})}
                 />
             </Switch>
         </BrowserRouter>

@@ -1,41 +1,152 @@
 @import '../mixin.scss';
+@import '../color.scss';
+
+$mainHeaderHeight: 64px;
+$mainHeaderHeightMobile: 35px;
+
 @include mobile {
-    .mainHeader {
+    .MainHeaderWrap {
+        position: fixed;
+        top: 0;
         width: 100%;
+        background-color: $mainColor;
+    }
+
+    .MainHeader {
         display: flex;
-        flex-direction: column;
+        // height: $mainHeaderHeight;
+        height: initial;
+        margin: 0 auto;
+        flex: 0 1 1000px;
+        justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
-        margin: 0 auto;
-        margin-top: 30px;
+        width: 90%;
     }
-    .mainLogoWrap {
-        width: 200px;
+
+    .MainHeaderLeft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    .MainLogoWrap {
+        width: 100px;
         cursor: pointer;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        .mainLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .MainLogo {
             width: 100%;
         }
+    }
+    .MainHeaderNavigationWrap {
+        .MainHeaderNavigation {
+            color: $backgroundColor;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: $mainHeaderHeight;
+            .MainHeaderNavigationItem {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-left: 40px;
+                box-sizing: border-box;
+                // width: 50px;
+                height: 100%;
+                &:hover {
+                    border-bottom: 3px solid $navItemColor;
+                    font-weight: bold;
+                    color: $navItemColor;
+                }
+            }
+        }
+    }
+    .MainHeaderSearchBoxWrap {
+        display: flex;
+        height: $mainHeaderHeight;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 
 @include tabletAndDesktop {
-    .mainHeader {
+    .MainHeaderWrap {
+        position: fixed;
+        top: 0;
         width: 100%;
+        background-color: $mainColor;
+    }
+
+    .MainHeader {
         display: flex;
+        height: $mainHeaderHeight;
+        margin: 0 auto;
+        // flex: 0 1 1000px;
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
-        margin: 0 auto;
-        margin-top: 30px;
+        width: 90%;
     }
 
-    .mainLogoWrap {
-        width: 250px;
+    .MainHeaderLeft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    .MainLogoWrap {
+        width: 140px;
         cursor: pointer;
-        .mainLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .MainLogo {
             width: 100%;
         }
+    }
+    .MainHeaderNavigationWrap {
+        .MainHeaderNavigation {
+            color: $backgroundColor;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: $mainHeaderHeight;
+            .MainHeaderNavigationItem {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-left: 40px;
+                box-sizing: border-box;
+                // width: 50px;
+                height: 100%;
+                &:hover {
+                    border-bottom: 3px solid $navItemColor;
+                    font-weight: bold;
+                    color: $navItemColor;
+                }
+            }
+        }
+    }
+    .MainHeaderSearchBoxWrap {
+        display: flex;
+        height: $mainHeaderHeight;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }

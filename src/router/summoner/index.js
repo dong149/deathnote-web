@@ -51,25 +51,28 @@ const Summoner = ({ match }) => {
                     </div>
                 </div>
             ) : (
-                <div
-                    style={{
-                        margin: '0 auto',
-                        width: '80%',
-                        display: 'flex',
-                        flexGrow: '0',
-                        flexDirection: 'column',
-                        flexWrap: 'wrap',
-                    }}
-                >
+                <>
                     <DeathnoteMainHeader />
-                    <DeathnoteHeader data={deathtnoteData} />
-                    <DeathnoteRank data={deathtnoteData} />
-                    <DeathnoteReport
-                        reportData={reportData}
-                        accountId={deathtnoteData.accountId}
-                        summonerName={deathtnoteData.summonerName}
-                    />
-                </div>
+                    <div
+                        style={{
+                            margin: '0 auto',
+                            width: '80%',
+                            marginTop: '100px',
+                            display: 'flex',
+                            flexGrow: '0',
+                            flexDirection: 'column',
+                            flexWrap: 'wrap',
+                        }}
+                    >
+                        <DeathnoteHeader data={deathtnoteData} />
+                        <DeathnoteRank data={deathtnoteData} />
+                        <DeathnoteReport
+                            reportData={reportData}
+                            accountId={deathtnoteData.accountId}
+                            summonerName={deathtnoteData.summonerName}
+                        />
+                    </div>
+                </>
             )}
             <DeathnoteFooter />
         </>

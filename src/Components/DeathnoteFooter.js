@@ -10,7 +10,7 @@ const DeathnoteFooter = () => {
                     style={{
                         textDecoration: 'none',
                         // width: '100%',
-                        color: 'white',
+                        color: 'black',
                     }}
                 >
                     <div className="FooterMenuItem">

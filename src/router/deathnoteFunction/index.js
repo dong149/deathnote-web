@@ -6,17 +6,18 @@ import '../../Styles/router/deathnoteFunction.scss';
 const DeathnoteFunction = () => {
     return (
         <>
+            <DeathnoteMainHeader />
             <div
                 style={{
                     margin: '0 auto',
                     width: '80%',
+                    marginTop: '100px',
                     display: 'flex',
                     flexGrow: '0',
                     flexDirection: 'column',
                     flexWrap: 'wrap',
                 }}
             >
-                <DeathnoteMainHeader />
                 <div className="DeathnoteFunction">
                     <div className="DeathnoteFunctionContentWrap">
                         <div className="DeathnoteFunctionContentTitle">
