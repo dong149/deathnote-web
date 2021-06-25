@@ -6,6 +6,7 @@ import Summoner from './summoner';
 import DeathnoteFunction from './deathnoteFunction';
 import withTracker from './withTracker';
 import DeathnoteRanker from './deathnoteRanker';
+
 export const EntryRoute = () => {
     return (
         <BrowserRouter>

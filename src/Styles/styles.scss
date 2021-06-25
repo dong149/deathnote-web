@@ -2,11 +2,14 @@
 $open-sans: 'Open Sans', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 body {
-    background-color: #eaeaea;
+    // background-color: #eaeaea;
+    background-color: rgb(28, 28, 31);
     font-family: $open-sans;
     // margin: 0;
 }
-
+textarea {
+    font-family: $open-sans;
+}
 @include mobile {
 }
 @include tablet {

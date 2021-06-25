@@ -1,4 +1,22 @@
 @import '../color.scss';
+@import '../mixin.scss';
+
+@include mobile {
+    .SummonerWrap {
+        .Summoner {
+            position: relative !important;
+            min-width: 0px !important;
+            margin: 50px 16px 0px !important;
+
+            .SummonerLeft {
+                margin-left: 0px !important;
+            }
+            .SummonerRight {
+                margin-left: 0px !important;
+            }
+        }
+    }
+}
 
 .SummonerLoadingWrap {
     width: 100%;
@@ -14,5 +32,28 @@
         font-size: 12px;
         color: white;
         line-height: 25px;
+    }
+}
+
+.SummonerWrap {
+    align-self: stretch;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 16px 0px;
+    .Summoner {
+        flex: 0 1 1080px;
+        min-width: 1080px;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        .SummonerLeft {
+            flex: 1 1 352px;
+        }
+        .SummonerRight {
+            flex: 1 1 716px;
+            margin-left: 12px;
+        }
     }
 }

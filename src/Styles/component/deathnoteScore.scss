@@ -1,0 +1,117 @@
+@import '../color.scss';
+@import '../mixin.scss';
+
+@include mobile {
+    .DeathnoteScoreWrap {
+        .DeathnoteScoreText {
+        }
+        .DeathnoteScore {
+            flex-direction: column !important;
+            .DeathnoteScoreTrollerWrap {
+                width: 100% !important;
+                .DeathnoteScoreTroller {
+                    .DeathnoteScoreTrollerNum {
+                        font-size: 35px !important  ;
+                    }
+                    .DeathnoteScoreTrollerSufix {
+                    }
+                }
+            }
+            .DeathnoteScoreTrollerCommentWrap {
+                font-size: 20px !important  ;
+                .DeathnoteScoreTrollerComment {
+                }
+            }
+            .DeathnoteScoreTrollerTierWrap {
+            }
+        }
+    }
+}
+
+.DeathnoteScoreWrap {
+    margin-top: 8px;
+    border-radius: 4px;
+    background-color: rgb(49, 49, 60);
+    box-sizing: border-box;
+    .DeathnoteScoreText {
+        border-bottom: 1px solid rgb(28, 28, 31);
+        color: rgb(195, 195, 211);
+        padding: 12px 16px;
+        align-self: stretch;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: normal;
+    }
+    .DeathnoteScore {
+        padding: 8px 16px 16px 8px;
+        // height: 300px;
+        border-bottom: 1px solid rgb(28, 28, 31);
+        color: rgb(195, 195, 211);
+        padding: 16px;
+        align-self: stretch;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: normal;
+        display: flex;
+        flex-wrap: wrap;
+        .DeathnoteScoreTrollerWrap {
+            padding: 50px 16px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex: 1 0;
+            margin-left: 8px;
+            margin-top: 8px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            .DeathnoteScoreTroller {
+                color: #eaeaea;
+                .DeathnoteScoreTrollerNum {
+                    font-weight: bold;
+                    font-size: 35px;
+                }
+                .DeathnoteScoreTrollerSufix {
+                    margin-left: 5px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .DeathnoteScoreTrollerCommentWrap {
+            background: $subColor;
+            padding: 50px 8px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex: 6 0;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 8px;
+            margin-top: 8px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            .DeathnoteScoreTrollerComment {
+            }
+        }
+        .DeathnoteScoreTrollerTierWrap {
+            background: $subColor;
+            padding: 50px 16px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            flex: 4 0 50px;
+            margin-left: 8px;
+            margin-top: 8px;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    }
+}

@@ -7,6 +7,7 @@ $mainHeaderHeightMobile: 35px;
 @include mobile {
     .MainHeaderWrap {
         position: fixed;
+        z-index: 9999;
         top: 0;
         width: 100%;
         background-color: $mainColor;
@@ -62,9 +63,9 @@ $mainHeaderHeightMobile: 35px;
                 // width: 50px;
                 height: 100%;
                 &:hover {
-                    border-bottom: 3px solid $navItemColor;
+                    border-bottom: 3px solid $pointColor;
                     font-weight: bold;
-                    color: $navItemColor;
+                    color: $pointColor;
                 }
             }
         }
@@ -81,6 +82,7 @@ $mainHeaderHeightMobile: 35px;
 @include tabletAndDesktop {
     .MainHeaderWrap {
         position: fixed;
+        z-index: 9999;
         top: 0;
         width: 100%;
         background-color: $mainColor;
@@ -135,9 +137,9 @@ $mainHeaderHeightMobile: 35px;
                 // width: 50px;
                 height: 100%;
                 &:hover {
-                    border-bottom: 3px solid $navItemColor;
+                    border-bottom: 3px solid $pointColor;
                     font-weight: bold;
-                    color: $navItemColor;
+                    color: $pointColor;
                 }
             }
         }

@@ -1,3 +1,98 @@
+@import '../color.scss';
+@import '../mixin.scss';
+
+.DeathnoteReportWrap {
+    margin-top: 8px;
+    border-radius: 4px;
+    background-color: rgb(49, 49, 60);
+    box-sizing: border-box;
+    .DeathnoteReportText {
+        border-bottom: 1px solid rgb(28, 28, 31);
+        color: rgb(195, 195, 211);
+        padding: 12px 16px;
+        align-self: stretch;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: normal;
+    }
+    .DeathnoteReport {
+        padding: 8px 16px 16px 8px;
+        // height: 300px;
+        border-bottom: 1px solid rgb(28, 28, 31);
+        color: rgb(195, 195, 211);
+        padding: 16px;
+        align-self: stretch;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: normal;
+        display: flex;
+        // flex-wrap: wrap;
+        flex-direction: column;
+
+        .DeathnoteReportItemWrap {
+            text-align: left;
+            margin-bottom: 15px;
+            // min-width: 20px;
+            .DeathnoteReportItem {
+                .DeathnoteReportItemDateWrap {
+                    margin-bottom: 10px;
+                    .DeathnoteReportItemDate {
+                    }
+                }
+                .DeathnoteReportItemTextWrap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: left;
+                    line-height: 25px;
+                    padding: 8px 8px 8px 8px;
+                    width: max-content;
+                    max-width: 50%;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    border: 1px solid rgb(28, 28, 31);
+                    background-color: rgb(28, 28, 31);
+                    .DeathnoteReportItemText {
+                    }
+                }
+            }
+        }
+        .DeathnoteNonReportItemWrap {
+            width: 100%;
+            margin-bottom: 15px;
+            // min-width: 20px;
+
+            .DeathtnoteNonReportItem {
+                float: right;
+                text-align: right;
+                .DeathnoteNonReportItemDateWrap {
+                    margin-bottom: 10px;
+                    .DeathnoteReportItemDate {
+                    }
+                }
+                .DeathnoteNonReportItemTextWrap {
+                    float: right;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: left;
+                    line-height: 25px;
+                    padding: 8px 8px 8px 8px;
+                    width: max-content;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    border: 1px solid #eaeaea;
+                    background-color: #eaeaea;
+                    color: #1a1d20;
+                    .DeathnoteNonReportItemText {
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 이전 디자인
 .Report {
     width: 100%;
     margin-top: 30px;

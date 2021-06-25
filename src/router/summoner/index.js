@@ -7,7 +7,11 @@ import DeathnoteMainHeader from '../../Components/DeathnoteMainHeader';
 import DeathnoteMatch from '../../Components/DeathnoteMatch';
 import DeathnoteRank from '../../Components/DeathnoteRank';
 import DeathnoteReport from '../../Components/DeathnoteReport';
+import DeathnoteReportGraph from '../../Components/DeathnoteReportGraph';
+import DeathnoteReportSubmit from '../../Components/DeathnoteReportSubmit';
+import DeathnoteScore from '../../Components/DeathnoteScore';
 import DeathnoteSearch from '../../Components/DeathnoteSearchBox';
+import DeathnoteSummoner from '../../Components/DeathnoteSummoner';
 import { isEmpty } from '../../Functions';
 import { deathnoteService } from '../../Services/deathnoteService';
 import '../../Styles/router/summoner.scss';
@@ -31,11 +35,12 @@ const Summoner = ({ match }) => {
     }, []);
 
     return (
-        <>
+        <div>
+            <DeathnoteMainHeader />
             {isEmpty(deathtnoteData) || isEmpty(reportData) ? (
                 <div className="SummonerLoadingWrap">
                     <DeathnoteLoading />
-                    <div
+                    {/* <div
                         className="mainDeathnoteDescription"
                         style={{ marginTop: '50px' }}
                     >
@@ -48,12 +53,31 @@ const Summoner = ({ match }) => {
                         최대 1분 정도 소요될 수 있습니다.
                         <br />
                         조금만 기다려주세요!
-                    </div>
+                    </div> */}
                 </div>
             ) : (
                 <>
-                    <DeathnoteMainHeader />
-                    <div
+                    <DeathnoteSummoner data={deathtnoteData} />
+                    <div className="SummonerWrap">
+                        <div className="Summoner">
+                            <div className="SummonerLeft">
+                                <DeathnoteRank data={deathtnoteData} />
+                            </div>
+                            <div className="SummonerRight">
+                                <DeathnoteScore data={deathtnoteData} />
+                                <DeathnoteReportGraph reportData={reportData} />
+                                <DeathnoteReport
+                                    reportData={reportData}
+                                    accountId={deathtnoteData.accoundId}
+                                    summonerName={deathtnoteData.summonerName}
+                                />
+                                <DeathnoteReportSubmit
+                                    reportData={reportData}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div
                         style={{
                             margin: '0 auto',
                             width: '80%',
@@ -71,11 +95,11 @@ const Summoner = ({ match }) => {
                             accountId={deathtnoteData.accountId}
                             summonerName={deathtnoteData.summonerName}
                         />
-                    </div>
+                    </div> */}
                 </>
             )}
-            <DeathnoteFooter />
-        </>
+            {/* <DeathnoteFooter /> */}
+        </div>
     );
 };
 

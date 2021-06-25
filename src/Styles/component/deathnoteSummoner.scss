@@ -1,0 +1,153 @@
+@import '../color.scss';
+@import '../mixin.scss';
+@import '../variables.scss';
+
+@include mobile {
+    .DeathnoteSummonerWrap {
+        margin-top: $MainMobileMarginTop !important;
+        padding: 16px 16px 90px !important;
+        .DeathnoteSummoner {
+            flex: 1 1 1080px;
+            .DeathnoteSummonerProfileIconWrap {
+                width: 80px !important;
+                height: 80px !important;
+                .DeathnoteSummonerProfileIcon {
+                    width: 80px !important;
+                    height: 80px !important;
+                }
+            }
+            .DeathnoteSummonerInfo {
+                margin-left: 16px !important;
+                .DeathnoteSummonerInfoTop {
+                    .DeathnoteSummonerInfoTopName {
+                    }
+                    .DeathnoteSummonerInfoTopLevel {
+                    }
+                }
+                .DeathnoteSummonerInfoBottom {
+                    position: absolute !important;
+                    left: 0px !important;
+                    bottom: -50px !important;
+                    .DeathnoteSummonerInfoBottomButton1 {
+                        padding: 8px 16px !important;
+                        min-width: 0px !important;
+                        height: initial !important;
+                        .DeathnoteSummonerInfoBottomButton1Text {
+                            font-size: 12px !important;
+                            line-height: 18px !important;
+                        }
+                    }
+                    .DeathnoteSummonerInfoBottomButton2 {
+                        padding: 8px 16px !important;
+                        min-width: 0px !important;
+                        height: initial !important;
+                        .DeathnoteSummonerInfoBottomButton2Text {
+                            font-size: 12px !important;
+                            line-height: 18px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.DeathnoteSummonerWrap {
+    margin-top: $MainMarginTop;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    align-self: stretch;
+    padding: 24px 24px 50px;
+    background: rgb(49, 49, 60);
+    // background: $subColor;
+    .DeathnoteSummoner {
+        position: relative;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        flex: 0 1 1080px;
+        .DeathnoteSummonerProfileIconWrap {
+            min-width: 80px;
+            min-height: 80px;
+
+            .DeathnoteSummonerProfileIcon {
+                position: relative;
+                width: 120px;
+                height: 120px;
+                box-sizing: border-box;
+                border-radius: 15%;
+                border-width: 0px;
+                border-style: solid;
+                border-image: initial;
+                border-color: black;
+            }
+        }
+        .DeathnoteSummonerInfo {
+            display: flex;
+            flex-flow: column wrap;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            align-self: stretch;
+            margin-left: 24px;
+            .DeathnoteSummonerInfoTop {
+                display: flex;
+                flex-flow: column wrap;
+                .DeathnoteSummonerInfoTopName {
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: rgb(255, 255, 255);
+                    font-weight: bold;
+                }
+                .DeathnoteSummonerInfoTopLevel {
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: rgb(195, 195, 211);
+                }
+            }
+            .DeathnoteSummonerInfoBottom {
+                position: relative;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                .DeathnoteSummonerInfoBottomButton1 {
+                    min-width: 100px;
+                    height: 40px;
+                    padding: 8px 24px;
+                    border-radius: 20px;
+                    white-space: nowrap;
+                    border: 1px solid $reportColor;
+                    color: rgb(255, 255, 255);
+                    background: $reportColor;
+                    font-weight: bold;
+                    cursor: pointer;
+                    .DeathnoteSummonerInfoBottomButton1Text {
+                        font-size: 15px;
+                        line-height: 24px;
+                        color: inherit;
+                    }
+                }
+                .DeathnoteSummonerInfoBottomButton2 {
+                    min-width: 100px;
+                    height: 40px;
+                    padding: 8px 24px;
+                    border-radius: 20px;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    border: 1px solid $nonReportColor;
+                    color: $nonReportColor;
+                    font-weight: bold;
+                    background: transparent;
+                    margin-left: 8px;
+                    .DeathnoteSummonerInfoBottomButton2Text {
+                        font-size: 15px;
+                        line-height: 24px;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
