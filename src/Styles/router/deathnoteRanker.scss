@@ -1,0 +1,301 @@
+@import '../color.scss';
+@import '../mixin.scss';
+@import '../variables.scss';
+
+@include mobile {
+    .DeathnoteRankerWrap {
+        margin-top: $MainMobileMarginTop + 20px !important;
+        margin-bottom: 8px;
+        padding: 16px;
+    }
+
+    .DeathnoteRankerAllWrap {
+    }
+    .DeathnoteRankerWrap {
+        .DeathnoteRanker {
+            .DeathnoteRankerLeft {
+                .DeathnoteRankerFirstWrap {
+                    .DeathnoteRankerFirst {
+                        .DeathnoteRankerFirstImg {
+                        }
+                        .DeathnoteRankerFirstContent {
+                            .DeathnoteRankerFirstContentName {
+                            }
+                            .DeathnoteRankerFirstContentScore {
+                            }
+                        }
+                    }
+                }
+                .DeathnoteRankerSecondAndThirdWrap {
+                    .DeathnoteRankerSecondAndThird {
+                        .DeathnoteRankerSecondAndThirdBody {
+                            .DeathnoteRankerSecondAndThirdImg {
+                            }
+                            .DeathnoteRankerSecondAndThirdContent {
+                                .DeathnoteRankerSecondAndThirdName {
+                                }
+                            }
+                            .DeathnoteRankerSecondAndThirdScoreWrap {
+                                .DeathnoteRankerSecondAndThirdScore {
+                                }
+                            }
+                        }
+                    }
+                }
+                .DeathnoteRankerRestWrap {
+                    .DeathnoteRankerRest {
+                        padding: 8px !important;
+                        .DeathnoteRankerRestRank {
+                            margin-left: 0px !important;
+                            text-align: center !important;
+                        }
+                        .DeathnoteRankerRestImg {
+                            margin-left: 8px !important;
+                        }
+                        .DeathnoteRankerRestName {
+                            flex: 2 1 0% !important;
+                            width: 180px !important;
+                            margin-left: 8px !important;
+                        }
+                        .DeathnoteRankerRestScore1 {
+                        }
+                        .DeathnoteRankerRestScore2 {
+                        }
+                    }
+                }
+            }
+            .DeathnoteRankerRight {
+            }
+        }
+    }
+}
+.DeathnoteRankerAllWrap {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+    background: rgb(28, 28, 31);
+    display: flex;
+    flex-direction: column;
+}
+.DeathnoteRankerWrap {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: $MainMarginTop + 40px;
+    margin-bottom: 70px;
+
+    .DeathnoteRanker {
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        box-sizing: border-box;
+        flex: 0 1 1080px;
+        flex-wrap: wrap;
+
+        .DeathnoteRankerLeft {
+            flex: 0 1 716px;
+
+            .DeathnoteRankerFirstWrap {
+                border-radius: 4px;
+                background-color: rgb(49, 49, 60);
+                box-sizing: border-box;
+                .DeathnoteRankerFirst {
+                    border-bottom: 1px solid rgb(28, 28, 31);
+                    color: rgb(195, 195, 211);
+                    padding: 16px;
+                    align-self: stretch;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: normal;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .DeathnoteRankerFirstImg {
+                        position: relative;
+                        width: 48px;
+                        height: 48px;
+                        box-sizing: border-box;
+                        border-radius: 50%;
+                        background: 0% 0% / cover;
+                        border-width: 1px;
+                        border-style: solid;
+                        border-image: initial;
+                        border-color: rgb(255, 169, 5);
+                    }
+                    .DeathnoteRankerFirstContent {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex: 1 1 0%;
+                        -webkit-box-pack: justify;
+                        justify-content: space-between;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        margin-left: 28px;
+                        .DeathnoteRankerFirstContentName {
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: rgb(255, 255, 255);
+                            font-weight: bold;
+                            flex: 3 1 0%;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            width: 212px;
+                            overflow: hidden;
+                        }
+                        .DeathnoteRankerFirstContentScore1 {
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: rgb(195, 195, 211);
+                            flex: 1 1 auto;
+                            text-align: right;
+                        }
+                        .DeathnoteRankerFirstContentScore2 {
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: rgb(255, 255, 255);
+                            flex: 1 1 auto;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            .DeathnoteRankerSecondAndThirdWrap {
+                display: flex;
+                flex-wrap: wrap;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                .DeathnoteRankerSecondAndThird {
+                    margin-top: 8px;
+                    flex: 0 1 352px;
+                    border-radius: 4px;
+                    background-color: rgb(49, 49, 60);
+                    box-sizing: border-box;
+                    .DeathnoteRankerSecondAndThirdBody {
+                        padding: 16px 32px 16px 16px;
+                        box-sizing: border-box;
+                        border-bottom: 1px solid rgb(28, 28, 31);
+                        color: rgb(195, 195, 211);
+                        padding: 16px;
+                        align-self: stretch;
+                        font-size: 14px;
+                        line-height: 20px;
+                        letter-spacing: normal;
+                        display: flex;
+                        flex-wrap: wrap;
+                        .DeathnoteRankerSecondAndThirdImg {
+                            position: relative;
+                            width: 48px;
+                            height: 48px;
+                            box-sizing: border-box;
+                            border-radius: 50%;
+                            border-width: 1px;
+                            border-style: solid;
+                            border-image: initial;
+                            border-color: rgb(197, 203, 208);
+                        }
+                        .DeathnoteRankerSecondAndThirdContent {
+                            display: flex;
+                            flex-flow: column wrap;
+                            flex: 1 1 0%;
+                            margin-left: 28px;
+                            .DeathnoteRankerSecondAndThirdName {
+                                font-size: 20px;
+                                line-height: 30px;
+                                color: rgb(255, 255, 255);
+                                font-weight: bold;
+                                flex: 3 1 0%;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                width: 212px;
+                                overflow: hidden;
+                            }
+                        }
+                        .DeathnoteRankerSecondAndThirdScoreWrap {
+                            display: flex;
+                            -webkit-box-pack: justify;
+                            justify-content: space-between;
+                            .DeathnoteRankerSecondAndThirdScore1 {
+                                font-size: 14px;
+                                color: rgb(195, 195, 211);
+                            }
+                            .DeathnoteRankerSecondAndThirdScore2 {
+                                font-size: 14px;
+                                color: rgb(195, 195, 211);
+                            }
+                        }
+                    }
+                }
+            }
+            .DeathnoteRankerRestWrap {
+                margin-top: 8px;
+                border-radius: 4px;
+                background-color: rgb(49, 49, 60);
+                box-sizing: border-box;
+                .DeathnoteRankerRest {
+                    display: flex;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    padding: 8px 32px 8px 16px;
+                    border-bottom: 1px solid rgb(28, 28, 31);
+                    color: rgb(195, 195, 211);
+                    padding: 16px;
+                    align-self: stretch;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: normal;
+                    flex-wrap: wrap;
+                    .DeathnoteRankerRestRank {
+                        color: rgb(103, 102, 118);
+                        font-size: 14px;
+                        line-height: 20px;
+                        white-space: nowrap;
+                        flex: 0 1 24px;
+                        margin-left: 16px;
+                    }
+                    .DeathnoteRankerRestImg {
+                        margin-left: 16px;
+                        position: relative;
+                        width: 28px;
+                        height: 28px;
+                        box-sizing: border-box;
+                        border-radius: 50%;
+                        border-width: 0px;
+                        border-style: solid;
+                        border-image: initial;
+                        border-color: black;
+                    }
+                    .DeathnoteRankerRestName {
+                        color: rgb(255, 255, 255);
+                        font-size: 14px;
+                        line-height: 20px;
+                        white-space: nowrap;
+                        flex: 3 1 0%;
+                        margin-left: 12px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    .DeathnoteRankerRestScore1 {
+                        color: rgb(216, 216, 229);
+                        font-size: 14px;
+                        line-height: 20px;
+                        white-space: nowrap;
+                        flex: 1 1 0%;
+                        text-align: right;
+                        font-weight: normal;
+                    }
+                    .DeathnoteRankerRestScore2 {
+                        color: rgb(216, 216, 229);
+                        font-size: 14px;
+                        line-height: 20px;
+                        white-space: nowrap;
+                        flex: 1 1 0%;
+                        text-align: right;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .DeathnoteRankerRight {
+        }
+    }
+}

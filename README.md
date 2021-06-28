@@ -15,7 +15,7 @@ https://deathnote.gg
 
 ## TODO
 
--   [ ] 전적갱신 기능 구현
+-   [x] 전적갱신 기능 구현
 -   [ ] 검색시에 Error Handling 구현
 -   [ ] 신고 기능 Summoner 상단 버튼 구현
 -   [ ] Main에 최근 신고된 유저 뷰 구현 ( 지명 수배 )
