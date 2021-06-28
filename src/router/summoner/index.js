@@ -122,7 +122,7 @@ const Summoner = ({ match }) => {
                     </div> */}
                 </>
             )}
-            {/* <DeathnoteFooter /> */}
+            <DeathnoteFooter />
         </div>
     );
 };
