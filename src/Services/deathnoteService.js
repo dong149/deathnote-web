@@ -17,7 +17,7 @@ export const deathnoteService = {
     getDeathnoteByName: async (summonerName, reload) => {
         try {
             const res = await baseAPI.get(
-                `api/v1/deathnote/summoner?${summonerName}&?${reload}`
+                `api/v1/deathnote/summoner?${summonerName}&reload=${reload}`
             );
             // console.log(res);
             return res.data.data || [];
