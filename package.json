@@ -20,6 +20,7 @@
     "react-loading": "2.0.3",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.2",
+    "react-share": "4.4.0",
     "sockjs-client": "1.5.0",
     "stompjs": "2.3.3",
     "styled-reset": "4.3.4",

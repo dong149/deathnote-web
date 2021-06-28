@@ -13,7 +13,7 @@ const DeathnoteSearchBox = () => {
             history.push({
                 pathname: `/summoner/name=${name}`,
             });
-            window.location.reload();
+            window.location.reload(true);
         } catch (err) {
             console.error(err);
         }
@@ -63,6 +63,7 @@ const DeathnoteSearchBox = () => {
                                     history.push({
                                         pathname: `/summoner/name=${data.summonerName}`,
                                     });
+                                    window.location.reload(true);
                                 }}
                             >
                                 <table>
@@ -101,34 +102,3 @@ const DeathnoteSearchBox = () => {
 };
 
 export default DeathnoteSearchBox;
-
-// const keywordData = [
-//     {
-//         summonerName: 'Hide on bush',
-//         summonerLevel: 464,
-//         summonerIcon: 6,
-//         summonerTier: 'CHALLENGER',
-//         summonerRank: 'I',
-//     },
-//     {
-//         summonerName: 'Hide in secs',
-//         summonerLevel: 143,
-//         summonerIcon: 4765,
-//         summonerTier: 'SILVER',
-//         summonerRank: 'IV',
-//     },
-//     {
-//         summonerName: 'Hide 0k bush',
-//         summonerLevel: 65,
-//         summonerIcon: 4881,
-//         summonerTier: 'SILVER',
-//         summonerRank: 'I',
-//     },
-//     {
-//         summonerName: 'Hide 0n bush',
-//         summonerLevel: 118,
-//         summonerIcon: 3478,
-//         summonerTier: 'BRONZE',
-//         summonerRank: 'III',
-//     },
-// ];
