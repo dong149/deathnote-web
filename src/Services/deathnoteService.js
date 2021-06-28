@@ -51,6 +51,17 @@ export const deathnoteService = {
             return [];
         }
     },
+    getDeathnoteTrollerRank: async (num) => {
+        try {
+            const res = await baseAPI.get(
+                `api/v1/deathnote/troller/rank?num=${num}`
+            );
+            return res.data.data || [];
+        } catch (err) {
+            console.log('랭킹 정보 조회 실패');
+            return [];
+        }
+    },
     getDeathnoteByKeyword: async (keyword) => {
         try {
             const res = await baseAPI.get(

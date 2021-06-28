@@ -1,34 +1,84 @@
-.Footer {
+@import '../color.scss';
+@import '../mixin.scss';
+@import '../variables.scss';
+
+@include mobile {
+}
+
+.DeathnoteFooterWrap {
+    bottom: 0px;
+    left: 0px;
     width: 100%;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: auto;
     display: flex;
+    -webkit-box-pack: center;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    .FootPoweredByDeathnote {
-        width: 100%;
-        display: block;
-        line-height: 30px;
-        font-size: 15px;
-        text-align: center;
-    }
-    .FooterMenu {
-        width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    align-self: stretch;
+    padding: 64px 24px 24px;
+    box-sizing: border-box;
+    background: rgb(49, 49, 60);
+    .DeathnoteFooter {
+        position: relative;
         display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        font-size: 15px;
-        cursor: pointer;
-        padding-top: 40px;
-        .FooterMenuItem {
-            padding-left: 20px;
-            padding-right: 20px;
-            // width: 120px;
-            &:hover {
-                font-weight: bold;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        flex: 0 1 1080px;
+        .DeathnoteFooterTop {
+            display: flex;
+            flex-flow: column wrap;
+            .DeathnoteFooterTopTitle {
+                font-size: 14px;
+                line-height: 20px;
+                color: rgb(255, 255, 255);
             }
+            .DeathnoteFooterTopDescription {
+                font-size: 12px;
+                line-height: 18px;
+                color: rgb(103, 102, 118);
+                margin: 12px 0px;
+            }
+        }
+
+        .DeathnoteFooterBottom {
         }
     }
 }
+
+// .Footer {
+//     width: 100%;
+//     margin-top: 100px;
+//     margin-bottom: 50px;
+//     display: flex;
+//     justify-content: center;
+//     text-align: center;
+//     flex-direction: column;
+//     .FootPoweredByDeathnote {
+//         width: 100%;
+//         display: block;
+//         line-height: 30px;
+//         font-size: 15px;
+//         text-align: center;
+//     }
+//     .FooterMenu {
+//         width: 100%;
+//         display: flex;
+//         justify-content: center;
+//         text-align: center;
+//         align-items: center;
+//         font-size: 15px;
+//         cursor: pointer;
+//         padding-top: 40px;
+//         .FooterMenuItem {
+//             padding-left: 20px;
+//             padding-right: 20px;
+//             // width: 120px;
+//             &:hover {
+//                 font-weight: bold;
+//             }
+//         }
+//     }
+// }
