@@ -63,6 +63,7 @@ const DeathnoteSearchBox = () => {
                                     history.push({
                                         pathname: `/summoner/name=${data.summonerName}`,
                                     });
+                                    window.location.reload(true);
                                 }}
                             >
                                 <table>

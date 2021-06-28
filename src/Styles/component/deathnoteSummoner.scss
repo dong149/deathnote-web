@@ -16,6 +16,7 @@
                     height: 80px !important;
                 }
             }
+
             .DeathnoteSummonerInfo {
                 margin-left: 16px !important;
                 .DeathnoteSummonerInfoTop {
@@ -46,6 +47,14 @@
                             line-height: 18px !important;
                         }
                     }
+                }
+                .DeathnoteSummonerInfoBottomUpdateTime {
+                    position: absolute !important;
+                    left: 5px !important;
+                    bottom: -68px !important;
+                    height: 12px !important;
+                    color: #99a2a2 !important;
+                    font-size: 12px !important;
                 }
             }
         }
@@ -102,16 +111,27 @@
                     font-weight: bold;
                 }
                 .DeathnoteSummonerInfoTopLevel {
-                    font-size: 12px;
+                    font-size: 14px;
                     line-height: 18px;
-                    color: rgb(195, 195, 211);
+                    // color: rgb(195, 195, 211);
+                    color: #99a2a2;
                 }
+            }
+            .DeathnoteSummonerInfoBottomUpdateTime {
+                position: absolute;
+                left: 150px;
+                bottom: -18px;
+                height: 12px;
+                color: #99a2a2;
+                font-size: 13px;
             }
             .DeathnoteSummonerInfoBottom {
                 position: relative;
                 display: flex;
                 -webkit-box-align: center;
                 align-items: center;
+                // margin-bottom: 10px;
+
                 .DeathnoteSummonerInfoBottomButton1 {
                     min-width: 100px;
                     height: 40px;
@@ -146,6 +166,13 @@
                         line-height: 24px;
                         color: inherit;
                     }
+                }
+                .DeathnoteSummonerInfoBottomShareButton {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    margin-left: 8px;
                 }
             }
         }

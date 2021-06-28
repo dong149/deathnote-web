@@ -58,3 +58,25 @@ export const getTierColor = (tier) => {
     }
     return temp;
 };
+
+export const handleReloadDate = (date) => {
+    let dyear = parseInt(date.substring(0, 4));
+    let dmonth = parseInt(date.substring(5, 7)) - 1;
+    let dday = parseInt(date.substring(8, 10));
+    let dhour = parseInt(date.substring(11, 13));
+    let dmin = parseInt(date.substring(14, 16));
+    let dsec = parseInt(date.substring(17, 19));
+
+    let res = formatDistanceToNow(
+        new Date(dyear, dmonth, dday, dhour, dmin, dsec),
+        { includeSeconds: true, locale: ko }
+    );
+
+    var distance =
+        new Date().getTime() -
+        new Date(dyear, dmonth, dday, dhour, dmin, dsec).getTime();
+
+    if (distance < 500000) return false;
+
+    return true;
+};
