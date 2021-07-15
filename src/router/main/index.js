@@ -10,10 +10,13 @@ import { createBrowserHistory } from 'history';
 import DeathnoteMainHeader from '../../Components/DeathnoteMainHeader';
 import { Helmet } from 'react-helmet';
 import { ReactComponent as SearchIcon } from '../../Assets/deathnote-search-btn.svg';
+import DeathnoteNoteMain from '../../Components/DeathnoteNoteMain';
 const Main = () => {
     const history = useHistory();
     const [name, setName] = useState('');
     const [keywordData, setKeywordData] = useState([]);
+    const [recentNoteReload, setRecentNoteReload] = useState(false);
+    const [recentNoteData, setRecentNoteData] = useState([]);
     const enterEvent = async () => {
         try {
             history.push({
@@ -29,6 +32,11 @@ const Main = () => {
         }
     };
 
+    useEffect(() => {
+        deathnoteService.getDeathnoteRecentNote().then((data) => {
+            setRecentNoteData(data.noteList);
+        });
+    }, []);
     useEffect(() => {
         deathnoteService.getDeathnoteByKeyword(name).then((data) => {
             setKeywordData(data.summonerKeywordDtoList);
@@ -127,8 +135,12 @@ const Main = () => {
                         </span>
                     </div>
                 </a> */}
-                {/* <DeathnoteFooter /> */}
             </div>
+
+            {!isEmpty(recentNoteData) && (
+                <DeathnoteNoteMain noteData={recentNoteData} />
+            )}
+            <DeathnoteFooter />
         </>
     );
 };

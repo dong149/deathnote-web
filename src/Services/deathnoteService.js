@@ -67,10 +67,19 @@ export const deathnoteService = {
             const res = await baseAPI.get(
                 `api/v1/deathnote/summoner/keyword?keyword=${keyword}`
             );
-            // console.log(res);
             return res.data.data || [];
         } catch (err) {
             console.log('키워드 검색 실패');
+            return [];
+        }
+    },
+
+    getDeathnoteRecentNote: async () => {
+        try {
+            const res = await baseAPI.get(`api/v1/note/recent`);
+            return res.data.data || [];
+        } catch (err) {
+            console.log('최근 Note 검색 실패');
             return [];
         }
     },

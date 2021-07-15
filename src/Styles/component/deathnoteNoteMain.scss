@@ -1,0 +1,186 @@
+@import '../color.scss';
+@import '../mixin.scss';
+@import '../variables.scss';
+
+@include mobile {
+    .DeathnoteNoteMainWrapAlertWrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 80px;
+        color: $pointColor;
+        background-color: rgba(255, 0, 96, 0.2);
+        border-radius: 4px;
+        border: 1px solid $pointColor;
+        width: 90% !important;
+
+        .DeathnoteNoteMainWrapAlert {
+            text-align: center;
+            padding: 16px 30px;
+        }
+    }
+    .DeathnoteNoteMainWrap {
+        width: 90% !important;
+
+        .DeathnoteNoteMain {
+            flex: 1 0 656px !important;
+            max-width: 100% !important;
+            .DeathnoteNoteMainProfileIcon {
+            }
+            .DeathnoteNoteMainBody {
+                .DeathnoteNoteMainTitle {
+                }
+                .DeathnoteNoteMainContent {
+                }
+            }
+        }
+    }
+}
+
+.DeathnoteNoteMainWrapTitleWrap {
+    margin: 0 auto;
+    margin-top: 80px;
+    background-color: rgb(49, 49, 60);
+    border-radius: 31px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    width: 664px;
+    line-height: 20px;
+    text-align: center;
+    .DeathnoteNoteMainWrapTitle {
+        padding: 16px 30px;
+    }
+}
+.DeathnoteNoteMainWrapAlertWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 80px;
+    color: $pointColor;
+    background-color: rgba(255, 0, 96, 0.2);
+    border-radius: 4px;
+    border: 1px solid $pointColor;
+    width: 664px;
+
+    .DeathnoteNoteMainWrapAlert {
+        text-align: center;
+        padding: 16px 30px;
+    }
+}
+
+.DeathnoteNoteMainWrap {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 664px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+
+    .DeathnoteNoteMain {
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 12px 16px;
+        margin-top: 8px;
+        flex: 1 0 328px;
+        max-width: 328px;
+        height: 300px;
+        border-radius: 4px;
+        // background-color: rgb(49, 49, 60);
+        background-color: $subColor;
+
+        .DeathnoteNoteMainProfile {
+            width: 100%;
+            display: flex;
+            flex: 1 0;
+            border-radius: 4px;
+            padding: 10px;
+            // border: 1px solid rgb(49, 49, 60);
+            // background-color: rgb(49, 49, 60);
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            // justify-content: center;
+
+            .DeathnoteNoteMainProfileIcon {
+                position: relative;
+                width: 45px;
+                height: 45px;
+                box-sizing: border-box;
+                border-radius: 50%;
+                background: url(//opgg-static.akamaized.net/images/profile_icons/profileIcon4964.jpg?image=q_auto:best&v=1518361200)
+                    0% 0% / cover;
+                border-width: 0px;
+                border-style: solid;
+                border-image: initial;
+                border-color: black;
+            }
+            .DeathnoteNoteMainProfileContent {
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+                .DeathnoteNoteMainProfileName {
+                    line-height: 23px;
+                    color: rgb(255, 255, 255);
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                .DeathnoteNoteMainProfileTier {
+                    line-height: 18px;
+                    color: rgb(255, 255, 255);
+                    font-size: 12px;
+                }
+            }
+        }
+        .DeathnoteNoteMainBody {
+            flex: 4 0;
+            width: 100%;
+            // display: flex;
+            // // flex: 1 1 0%;
+            // flex-direction: column;
+            // -webkit-box-pack: justify;
+            // justify-content: space-between;
+            // align-self: stretch;
+            // margin-left: 12px;
+            .DeathnoteNoteMainTitleWrap {
+                width: 100%;
+                padding-top: 10px;
+                font-weight: bold;
+                .DeathnoteNoteMainTitle {
+                    line-height: 30px;
+                    color: rgb(255, 255, 255);
+                    font-size: 20px;
+                }
+            }
+
+            .DeathnoteNoteMainContentWrap {
+                padding-top: 20px;
+                .DeathnoteNoteMainContent {
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: rgb(192, 165, 255);
+                }
+            }
+        }
+        .DeathnoteNoteMainMoreIcon {
+            filter: invert(70%) sepia(8%) saturate(292%) hue-rotate(161deg);
+            // background-color: rgb(49, 49, 60);
+            color: rgb(49, 49, 60);
+            padding: 4px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+    }
+}

@@ -18,6 +18,7 @@ https://deathnote.gg
 -   [ ] 신고 기능 Summoner 상단 버튼 구현
 -   [ ] Main에 최근 신고된 유저 뷰 구현 ( 지명 수배 )
 -   [ ] Deathnote 알고리즘 설명 페이지 구현
+-   [ ] 순위표 소환사 누를 때, 해당 Summoner Page로 이동되도록 구현
 -   [x] 전적갱신 기능 구현
 -   [x] 검색시에 Error Handling 구현
 -   [x] Rank 뷰 구현

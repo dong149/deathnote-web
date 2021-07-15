@@ -46,7 +46,7 @@ const DeathnoteRank = (props) => {
                         승률 {data.matchWinningRate}%
                     </span>
                     <span className="RankInfoContentWinOrLose">
-                        최근 전적 {data.matchWin}승 {data.matchLose}패
+                        {data.matchWin}승 {data.matchLose}패
                     </span>
                 </div>
             </div>
