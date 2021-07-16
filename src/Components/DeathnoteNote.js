@@ -8,8 +8,6 @@ const DeathnoteNote = (props) => {
     const { data } = props;
 
     const [isOpened, setIsOpened] = useState(false);
-
-    console.log(data);
     return (
         <div className="DeathnoteNoteMain">
             <div className="DeathnoteNoteMainProfile">

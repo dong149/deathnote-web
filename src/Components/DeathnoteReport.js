@@ -7,7 +7,7 @@ const DeathnoteReport = (props) => {
     const { reportData, accountId, summonerName } = props;
     const [reportType, setReportType] = useState(false);
     const [reportContent, setReportContent] = useState('');
-    const [reports, setReports] = useState(reportData.data);
+    // const [reports, setReports] = useState(reportData.data);
     const [reportViewOpen, setReportViewOpen] = useState(false);
 
     const onSubmit = () => {
@@ -31,8 +31,8 @@ const DeathnoteReport = (props) => {
                 <span style={{ fontWeight: 'bold' }}>{summonerName}</span> 평가
             </div>
             <div className="DeathnoteReport">
-                {!isEmpty(reports) &&
-                    reports
+                {!isEmpty(reportData.data) &&
+                    reportData.data
                         .slice(0)
                         .reverse()
                         .map((data, key) => {

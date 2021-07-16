@@ -16,6 +16,7 @@ import { handleReloadDate, isEmpty } from '../../Functions';
 import { deathnoteService } from '../../Services/deathnoteService';
 import '../../Styles/router/summoner.scss';
 import { useLocation } from 'react-router-dom';
+import DeathnoteNoteSubmit from '../../Components/DeathnoteNoteSubmit';
 
 const Summoner = ({ match }) => {
     // 소환사 이름
@@ -46,10 +47,13 @@ const Summoner = ({ match }) => {
     }, [reloadClicked]);
 
     useEffect(() => {
-        deathnoteService.getReportByName(summonerName).then((data) => {
-            setReportData(data);
-        });
-    }, []);
+        console.log(deathnoteData.accountId);
+        deathnoteService
+            .getReportByAccountId(deathnoteData.accountId)
+            .then((data) => {
+                setReportData(data);
+            });
+    }, [deathnoteData]);
 
     return (
         <div>
@@ -86,17 +90,22 @@ const Summoner = ({ match }) => {
                         <div className="Summoner">
                             <div className="SummonerLeft">
                                 <DeathnoteRank data={deathnoteData} />
+                                <DeathnoteNoteSubmit
+                                    accountId={deathnoteData.accountId}
+                                />
                             </div>
                             <div className="SummonerRight">
                                 <DeathnoteScore data={deathnoteData} />
                                 <DeathnoteReportGraph reportData={reportData} />
                                 <DeathnoteReport
                                     reportData={reportData}
-                                    accountId={deathnoteData.accoundId}
+                                    accountId={deathnoteData.accountId}
                                     summonerName={deathnoteData.summonerName}
                                 />
                                 <DeathnoteReportSubmit
-                                    reportData={reportData}
+                                    // reportData={reportData}
+                                    accountId={deathnoteData.accountId}
+                                    summonerName={deathnoteData.summonerName}
                                 />
                             </div>
                         </div>

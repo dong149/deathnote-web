@@ -8,9 +8,9 @@ const DeathnoteReportGraph = (props) => {
             datasets: [
                 {
                     data: [reportData.reportCount, reportData.noReportCount],
-                    backgroundColor: ['rgb(28, 28, 31)', '#eaeaea'],
-                    borderColor: ['rgb(28, 28, 31)', '#eaeaea'],
-                    hoverBackgroundColor: ['rgb(28, 28, 31)', '#eaeaea'],
+                    backgroundColor: ['#ff0061', '#00b3fc'],
+                    borderColor: ['#ff0061', '#00b3fc'],
+                    hoverBackgroundColor: ['#ff0061', '#00b3fc'],
                 },
             ],
             labels: ['리폿', '칭찬'],

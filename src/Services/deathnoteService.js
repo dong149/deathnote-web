@@ -26,9 +26,11 @@ export const deathnoteService = {
             return [];
         }
     },
-    getReportByName: async (summonerName) => {
+    getReportByAccountId: async (accountId) => {
         try {
-            const res = await baseAPI.get(`api/v1/report?${summonerName}`);
+            const res = await baseAPI.get(
+                `api/v1/report?accountId=${accountId}`
+            );
             // console.log(res);
             return res.data || reportDefaultData;
         } catch (err) {
@@ -74,12 +76,35 @@ export const deathnoteService = {
         }
     },
 
+    postNoteByAccountId: async (accountId, title, content) => {
+        try {
+            const res = await baseAPI.post(`api/v1/note`, {
+                accountId: accountId,
+                title: title,
+                content: content,
+            });
+            return res.data || [];
+        } catch (err) {
+            console.log(err);
+            return [];
+        }
+    },
     getDeathnoteRecentNote: async () => {
         try {
             const res = await baseAPI.get(`api/v1/note/recent`);
             return res.data.data || [];
         } catch (err) {
             console.log('최근 Note 검색 실패');
+            return [];
+        }
+    },
+
+    getDeathnoteNoteByAccountId: async (accountId) => {
+        try {
+            const res = await baseAPI.get(`api/v1/note?accountId${accountId}`);
+            return res.data.data || [];
+        } catch (err) {
+            console.log('Note by AccountId 조회 실패');
             return [];
         }
     },

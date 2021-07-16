@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 import '../Styles/component/deathnoteReportSubmit.scss';
 import { deathnoteService } from '../Services/deathnoteService';
 const DeathnoteReportSubmit = (props) => {
-    const { reportData, accountId, summonerName } = props;
-    const [reportType, setReportType] = useState(false);
+    const { accountId, summonerName } = props;
+    const [isReport, setIsReport] = useState(true);
     const [reportContent, setReportContent] = useState('');
-    const [reports, setReports] = useState(reportData.data);
-    const [reportViewOpen, setReportViewOpen] = useState(false);
+    // const [reports, setReports] = useState(reportData.data);
+    // const [reportViewOpen, setReportViewOpen] = useState(false);
 
     const onSubmit = () => {
+        console.log(reportContent);
+        console.log(accountId);
+        console.log(summonerName);
         deathnoteService
-            .postReportByName(
-                reportContent,
-                accountId,
-                !reportType,
-                summonerName
-            )
+            .postReportByName(reportContent, accountId, isReport, summonerName)
             .then((data) => {
                 window.location.reload();
             });
@@ -27,17 +25,42 @@ const DeathnoteReportSubmit = (props) => {
             {/* <div className="DeathnoteReportSubmit"> */}
 
             <div className="DeathnoteReportSubmitBtnWrap">
-                <button className="DeathnoteReportSubmitBtnReport">
+                <button
+                    // className="DeathnoteReportSubmitBtnReport"
+                    className={
+                        isReport
+                            ? 'DeathnoteReportSubmitBtnReportIsClicked'
+                            : 'DeathnoteReportSubmitBtnReportIsNotClicked'
+                    }
+                    onClick={() => {
+                        setIsReport(true);
+                    }}
+                >
                     리폿하고 싶어요 😡
                 </button>
-                <button className="DeathnoteReportSubmitBtnNonReport">
+                <button
+                    // className="DeathnoteReportSubmitBtnNonReport"
+                    className={
+                        isReport
+                            ? 'DeathnoteReportSubmitBtnNonReportIsNotClicked'
+                            : 'DeathnoteReportSubmitBtnNonReportIsClicked'
+                    }
+                    onClick={() => {
+                        setIsReport(false);
+                    }}
+                >
                     칭찬하고 싶어요 😃
                 </button>
             </div>
 
             <div className="DeathnoteReportSubmitTextAreaWrap">
                 <textarea
-                    className="DeathnoteReportSubmitTextArea"
+                    // className="DeathnoteReportSubmitTextArea"
+                    className={
+                        isReport
+                            ? 'DeathnoteReportSubmitTextAreaReport'
+                            : 'DeathnoteReportSubmitTextAreaNonReport'
+                    }
                     onChange={(e) => setReportContent(e.target.value)}
                     rows="4"
                     value={reportContent}
@@ -47,7 +70,12 @@ const DeathnoteReportSubmit = (props) => {
             </div>
 
             <div className="DeathnoteReportSubmitOKBtnWrap">
-                <button className="DeathnoteReportSubmitBtnOK">
+                <button
+                    className="DeathnoteReportSubmitBtnOK"
+                    onClick={() => {
+                        onSubmit();
+                    }}
+                >
                     제출할게요!
                 </button>
             </div>

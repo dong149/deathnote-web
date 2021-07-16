@@ -70,7 +70,23 @@
         max-width: 100%;
         padding: 12px 16px;
     }
-    .DeathnoteReportSubmitBtnReport {
+
+    .DeathnoteReportSubmitBtnReportIsClicked {
+        min-width: 90px;
+        text-align: center;
+        border: 0;
+        padding: 12px 16px;
+        color: white;
+        border: 1px solid $reportColor !important;
+        background-color: rgba(255, 0, 97, 0.5);
+        // color: $backgroundColor;
+        // border: 1px solid $backgroundColor !important;
+        // background-color: rgba(26, 29, 32, 0.2);
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .DeathnoteReportSubmitBtnReportIsNotClicked {
         min-width: 90px;
         text-align: center;
         border: 0;
@@ -92,7 +108,20 @@
         padding: 0px 16px 12px 16px;
         text-align: right;
     }
-    .DeathnoteReportSubmitBtnNonReport {
+    .DeathnoteReportSubmitBtnNonReportIsClicked {
+        min-width: 90px;
+        text-align: center;
+        border: 0;
+        margin-left: 10px;
+        padding: 12px 16px;
+        color: white;
+        border: 1px solid $nonReportColor !important;
+        background-color: rgba(0, 179, 252, 0.5);
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .DeathnoteReportSubmitBtnNonReportIsNotClicked {
         min-width: 90px;
         text-align: center;
         border: 0;
@@ -122,6 +151,39 @@
 
     .DeathnoteReportSubmitTextAreaWrap {
         padding: 12px 16px;
+
+        .DeathnoteReportSubmitTextAreaReport {
+            box-sizing: border-box;
+            padding: 8px 16px 16px 8px;
+            font-size: 16px;
+            border-radius: 4px;
+            width: 100%;
+            border: 0;
+            background-color: rgba(255, 0, 97, 0.5);
+            border: 1px solid rgba(255, 0, 97, 1);
+            color: white;
+            resize: none;
+            &::placeholder {
+                color: white;
+            }
+        }
+
+        .DeathnoteReportSubmitTextAreaNonReport {
+            box-sizing: border-box;
+            padding: 8px 16px 16px 8px;
+            font-size: 16px;
+            border-radius: 4px;
+            width: 100%;
+            border: 0;
+            background-color: rgba(0, 179, 252, 0.5);
+            border: 1px solid rgba(0, 179, 252, 1);
+            color: white;
+            resize: none;
+            &::placeholder {
+                color: white;
+            }
+        }
+
         .DeathnoteReportSubmitTextArea {
             box-sizing: border-box;
             padding: 8px 16px 16px 8px;
