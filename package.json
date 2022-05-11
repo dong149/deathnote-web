@@ -2,7 +2,7 @@
   "name": "deathnote-web",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:80",
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -11,7 +11,7 @@
     "axios": "0.21.1",
     "chart.js": "2.9.4",
     "date-fns": "2.22.1",
-    "node-sass": "5.0.0",
+    "node-sass": "^6.0.1",
     "react": "^17.0.1",
     "react-chartjs-2": "2.11.1",
     "react-dom": "^17.0.1",
